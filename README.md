@@ -1,4 +1,4 @@
-# Project2    Pillars - Restructureing Humanity
+# Pillars - Restructureing Humanity
 
 
 
