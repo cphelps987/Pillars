@@ -18,17 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
-//require('./controllers/controllers.js')(app); 
+var routes = require('./controllers/controllers.js'); 
 
-//TEST RENDERING PLEASE IGNORE
-app.get('/', function(req, res) {
-
-  res.render("index.handlebars");
-
-});
-//END TEST RENDERING
-
-
+app.use("/", routes);
 
 
 app.listen(port, function () {
