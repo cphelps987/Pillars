@@ -1,4 +1,4 @@
-# Pillars - Restructureing Humanity
+# Pillars - Restructuring Humanity
 
 
 
