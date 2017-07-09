@@ -72,7 +72,10 @@
 ### Resources Page
 * Link + Description sections
 * Up/Down Votes
-*
+* (Chapiter)
+
+### Chat Room Page:
+* (Plinth)
 
 ### About Page
 *
