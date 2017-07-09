@@ -48,6 +48,9 @@
 * Figure out how to push passport data into database
 * **Make sure chat deletes** 
 * **No cookies**
+* **Dont HAVE to login**
+* Search bar to search for chats
+* **private** chats
 
 ## Pages (for html outline):
 
