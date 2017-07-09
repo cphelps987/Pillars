@@ -6,7 +6,8 @@ USE userDB;
 CREATE TABLE userTable
 (
 	id int NOT NULL AUTO_INCREMENT,
-	userNames varchar(255) NOT NULL,
+	role varchar(255) NOT NULL,
+	score int NOT NULL AUTO_INCREMENT, 
 	link varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
