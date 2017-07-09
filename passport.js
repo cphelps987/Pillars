@@ -1,6 +1,6 @@
 var express = require('express');
 
-module.exports(function (app) {
+module.exports = function (app) {
 
     var passport = require('passport');
     var Strategy = require('passport-local').Strategy;
@@ -90,4 +90,4 @@ module.exports(function (app) {
             res.render('profile', { user: req.user });
         });
 
-})
+}

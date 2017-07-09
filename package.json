@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/cphelps987/Project2#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
     "mysql": "^2.13.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
