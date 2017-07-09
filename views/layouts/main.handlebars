@@ -9,6 +9,10 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+{{> nav/mainnav}}
+{{#if user.admin}}
+	{{> nav/adminnav}}
+{{/if}}
 
 {{{ body }}}
 
