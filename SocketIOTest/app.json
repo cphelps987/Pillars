@@ -1,0 +1,19 @@
+{
+  "name": "Socket-Chat-Test",
+  "description": "my first socket.io app",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ],
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+    ""
+  }
+}
