@@ -18,7 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
-var routes = require('./controllers/controllers.js'); 
+var routes = require('./controllers/controllers.js');
+require('./passport.js')
 
 app.use("/", routes);
 
