@@ -1,4 +1,4 @@
--- Admin DB
+-- User DB
 CREATE DATABASE userDB;
 
 USE userDB;
