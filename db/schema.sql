@@ -1,14 +1,12 @@
 -- Admin DB
-CREATE DATABASE adminDB;
+CREATE DATABASE userDB;
 
-USE adminDB;
+USE userDB;
 
-CREATE TABLE adminTable
+CREATE TABLE userTable
 (
 	id int NOT NULL AUTO_INCREMENT,
 	userNames varchar(255) NOT NULL,
-	verifiedUsers varchar(255) NOT NULL,
-	helpfulRes varchar(255) NOT NULL,
-	flags INT AUTO_INCREMENT NOT NULL,
+	link varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
