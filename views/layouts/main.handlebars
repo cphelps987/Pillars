@@ -10,6 +10,10 @@
   </head>
   <body>
 {{> nav/mainnav}}
+{{#if user.admin}}
+	{{> nav/adminnav}}
+{{/if}}
+
 {{{ body }}}
 
     <script src="assets/js/vendor/jquery.js"></script>
