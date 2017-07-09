@@ -53,6 +53,7 @@
 * **Dont HAVE to login**
 * **Search bar to search for chats**
 * **private** chats
+* Look at google recaptcha (https://www.google.com/recaptcha/intro/)
 
 ## Pages (for html outline):
 
