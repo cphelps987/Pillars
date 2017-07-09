@@ -2,7 +2,7 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "",
-  "main": "passport.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -20,6 +20,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+
     "express-handlebars": "^3.0.0",
     "mysql": "^2.13.0",
     "passport": "^0.3.2",

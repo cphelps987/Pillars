@@ -1,9 +1,3 @@
-/**
- * Created by courtneyphelps on 7/6/17.
- */
-/**
- * Created by courtneyphelps on 7/3/17.
- */
 //express and body parser
 var express = require ("express");
 var bodyParser = require ("body-parser");
@@ -18,11 +12,14 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
-var routes = require('./controllers/controllers.js');
-require('./passport.js')
 
-app.use("/", routes);
+// removed till we get another one
+// require('./controllers/controllers.js')(app);
 
+//var routes = require('./controllers/controllers.js');
+//require('./passport.js')
+
+//app.use("/", routes);
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
