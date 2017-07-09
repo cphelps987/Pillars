@@ -1,13 +1,17 @@
 # Pseudo Code
 
+# MVP (Minimum Viable Product)
+* **A chat that is anonymous and deletes**
+
 ## USER DATABASE
 * link (Helpful Resources table)
-* userNames
-* 
+* role (user, admin, mod)
+* chat room titles(?)
+* userScore (based on up votes)
 
 ## ADMIN DATABASE
-* userNames
-* verifiedUser
+* role (user, admin, mod)
+* verifiedUser 
 * link
 * flags
 
@@ -16,16 +20,34 @@
 * description
 * link
 
+## FAQ DATABASE:
+* question
+* answer
+
+## NOTSONICE DATABASE
+* **words to filter through**
+* racist
+* offensive
+* sexist
+
+### NPMS:
+* socket io
+* passport/oauth (we still need google for authentication) || (https://www.npmjs.com/package/simple-oauth2, https://oauth.net/2/)
+* geolocation (future?)
+* chalk(?)
+* emoji(?)
+* regexp(to filter offensive words)
+
 ### Project Outline
 * Get all of the npm packages and require them in server.js
-* Create admin and user databases
+* Create databases
+* **Break up server files by npm package**
 * Make a markup of the frontend
-* Make sure all of the packages/dbs to work with the frontend
-* 
-*
-*
-*
-*
+* Make sure all of the packages/dbs work with the frontend
+* Make sure we can set up multiple chats at one time
+* Figure out how to push passport data into database
+* **Make sure chat deletes** 
+* **No cookies**
 
 ## Pages (for html outline):
 
@@ -67,4 +89,4 @@
 * Real-Time Help
 * If the person was helpful
 * Causes (Meetup for aids, cancer, etc)
-*
+* Gives you default icon options
