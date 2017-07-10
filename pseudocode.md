@@ -83,7 +83,6 @@
 ### About Page
 *
 *
-*
 
 ### Disclaimers:
 * If this is a serious medical issue, please call 911
