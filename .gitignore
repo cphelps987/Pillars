@@ -3,7 +3,7 @@ node_modules
 .idea/workspace.xml
 Thumbs.db
 .vscode
-
+.idea
 
 # Logs
 logs

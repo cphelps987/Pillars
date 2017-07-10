@@ -16,10 +16,15 @@ app.set("view engine","handlebars");
 // removed till we get another one
 // require('./controllers/controllers.js')(app);
 
-//var routes = require('./controllers/controllers.js');
-//require('./passport.js')
 
-//app.use("/", routes);
+exports.orm = require('./config/orm.js');
+
+var routes = require('./controllers/controllers.js');
+require('./passport.js')
+require('./socketIO.js')
+
+
+app.use("/", routes);
 
 require('./emoji.js');
 
