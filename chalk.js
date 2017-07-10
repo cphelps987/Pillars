@@ -10,4 +10,3 @@ module.exports = function (app) {
 
 console.log(chalk.blue('Hello world!'));
 
-console.log(chalk.red('Fuck you, it works'));
