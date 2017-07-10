@@ -7,7 +7,6 @@
 ## USER DATABASE
 * link (Helpful Resources table)
 * role (user, admin, mod)
-* chat room titles(?)
 * userScore (based on up votes)
 
 ## ADMIN DATABASE
@@ -30,6 +29,10 @@
 * racist
 * offensive
 * sexist
+
+## CHAT DATABASE:
+* Chat title
+* Chat description
 
 ### NPMS:
 * socket io
