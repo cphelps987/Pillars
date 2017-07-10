@@ -22,6 +22,5 @@ module.exports = function (app) {
       io.emit('chat message', msg);
     });
   });
-
-
 };
+
