@@ -19,4 +19,10 @@ router.get('/plinth', function(req, res) {
 
 });
 
+router.get('/chapiter', function(req, res) {
+
+  res.render("resources.handlebars");
+
+});
+
 module.exports = router;
