@@ -17,3 +17,5 @@ console.log('node.js', emoji.get('coffee'));
 console.log('node.js', emoji.get('heart'));
 
 console.log('node.js', emoji.get('umbrella'));
+
+console
