@@ -21,9 +21,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
-// keeps user logged in
-//app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
-
 //flash to show a message if there's an incorrect login
 //app.use(flash());
 
