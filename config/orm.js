@@ -1,4 +1,5 @@
-require("./connection.js")
+require("./connection.js");
+
 
 var records = [
     { id: 1, username: 'jack', password: 'secret', displayName: 'Jack', emails: [ { value: 'jack@example.com' } ] }
@@ -38,3 +39,6 @@ exports.findByUsername = function(username, cb) {
         return cb(null, null);
     });
 }
+
+// GIVE ADMIN ALL ACCESS
+// GIVE USER LIMITED ACCESS
