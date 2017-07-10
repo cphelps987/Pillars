@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cphelps987/Project2#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chalk": "^2.0.1",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.13.0",

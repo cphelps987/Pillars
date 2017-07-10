@@ -21,7 +21,9 @@ app.set("view engine","handlebars");
 
 //app.use("/", routes);
 
-require('./emoji.js')
+require('./emoji.js');
+
+require('./chalk.js');
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
