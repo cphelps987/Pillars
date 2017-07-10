@@ -18,4 +18,6 @@ console.log('node.js', emoji.get('heart'));
 
 console.log('node.js', emoji.get('umbrella'));
 
-console
+console.log('node.js', emoji.get('middle_finger'));
+
+console.log('node.js', emoji.get('skull'));
