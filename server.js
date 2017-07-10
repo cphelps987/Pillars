@@ -1,7 +1,10 @@
 //express and body parser
 var express = require ("express");
+var flash = require('connect-flash');
 var bodyParser = require ("body-parser");
 var exphbs = require ("express-handlebars");
+var session = require('express-session');
+
 
 var app = express();
 var port = process.env.PORT || 3000;
