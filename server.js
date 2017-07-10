@@ -26,6 +26,8 @@ require('./socketIO.js')
 
 app.use("/", routes);
 
+require('./emoji.js')
+
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
 });
