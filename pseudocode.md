@@ -96,6 +96,7 @@
 
 ### Future Developments:
 * Real-Time Help
+* Local chat rooms
 * If the person was helpful
 * Causes (Meetup for aids, cancer, etc)
 * Gives you default icon options
