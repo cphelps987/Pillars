@@ -36,7 +36,7 @@ exports.orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 require('./passport.js')
-//require('./socketIO.js')
+require('./socketIO.js')
 
 
 app.use("/", routes);
