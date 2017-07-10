@@ -1,17 +1,16 @@
 -- User DB
-CREATE DATABASE viewDB;
+CREATE DATABASE userDB;
 
-USE viewDB;
+USE userDB;
 
-CREATE TABLE viewTable
+CREATE TABLE userTable
 (
 	id int NOT NULL AUTO_INCREMENT,
-	userNames varchar(255) NOT NULL,
+	userName varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
-	verifiedUsers varchar(255) NOT NULL,
-	role varchar(255) NOT NULL,
-	score int NOT NULL,
+	role(user, admin, mod) varchar(255) NOT NULL,
+	verifiedUser varchar(255) NOT NULL,
+	userScore int NOT NULL,
 	link varchar(255) NOT NULL,
-	flags INT NOT NULL,
 	PRIMARY KEY (id)
 );
