@@ -16,7 +16,7 @@ app.use(session({
 
 // For parsing post request's data/body
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Tells app to use password session
 app.use(auth.initialize());
@@ -25,8 +25,8 @@ app.use(auth.session());
 app.use(flash());
 
 // Set up routes
-app.get('/', function(req, res) {
-    if(req.user) {
+app.get('/', function (req, res) {
+    if (req.user) {
         res.send(
             '<p>You\'re logged in as <strong>' + req.user.username + '</strong>.</p>'
             + '<p><a href="/logout">Log out</a></p>'
@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
     }
 });
 
-app.get('/login', function(req, res) {
+app.get('/login', function (req, res) {
     res.send(
         '<form action="/login" method="POST">'
         + '<h2>Login</h2>'
@@ -46,11 +46,10 @@ app.get('/login', function(req, res) {
         + '<p><input type="submit" value="Login"></p>'
         + '<p style="color: red;">' + req.flash('error') + '</p>'
         + '</form>'
-
     );
 });
 
-app.get('/logout', function(req, res) {
+app.get('/logout', function (req, res) {
     req.logout();
     res.redirect('/');
 });
@@ -63,7 +62,7 @@ app.post('/login',
     })
 );
 
-var server = app.listen(3000, function() {
+var server = app.listen(3000, function () {
     var port = server.address().port;
 
     console.log('Server running on http://127.0.0.1:%s', port);
