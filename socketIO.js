@@ -1,6 +1,6 @@
 var express = require('express');
 
-//module.exports = function (app) {
+module.exports = function (app) {
 
   var app = require('express')();
   var http = require('http').Server(app);
@@ -17,8 +17,4 @@ var express = require('express');
     });
   });
 
-  http.listen(port, function(){
-    console.log('listening on :' + port);
-  });
-
-//}
+}
