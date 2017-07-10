@@ -7,7 +7,7 @@ CREATE TABLE userTable
 (
 	id int NOT NULL AUTO_INCREMENT,
 	role varchar(255) NOT NULL,
-	score int NOT NULL AUTO_INCREMENT, 
+	score int NOT NULL,
 	link varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
