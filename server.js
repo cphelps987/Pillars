@@ -17,7 +17,7 @@ app.set("view engine","handlebars");
 // require('./controllers/controllers.js')(app);
 
 
-exports.orm = require('.config/orm.js');
+exports.orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 require('./passport.js')
