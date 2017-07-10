@@ -34,8 +34,10 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 exports.orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
-require('./passport.js')(app);
-require('./socketIO.js')(app);
+
+require('./passport.js')
+// require('./socketIO.js')
+
 
 app.use("/", routes);
 

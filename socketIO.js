@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
 
-module.exports = function (app) {
+// module.exports = function (app) {
 
   console.log("Socket Linked");
 
   var app = require('express')();
   var http = require('http').Server(app);
   var io = require('socket.io')(http);
-  var port = process.env.PORT || 3000;
+  var port = process.env.PORT || 8080;
 
 
   console.log("io", io);
@@ -23,4 +23,8 @@ module.exports = function (app) {
     });
   });
 };
+
+  http.listen(port, function(){
+    console.log('listening on :' + port);
+  });
 
