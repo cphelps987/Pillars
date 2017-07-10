@@ -16,10 +16,10 @@ app.set("view engine","handlebars");
 // removed till we get another one
 // require('./controllers/controllers.js')(app);
 
-//var routes = require('./controllers/controllers.js');
-//require('./passport.js')
+var routes = require('./controllers/controllers.js');
+require('./passport.js')
 
-//app.use("/", routes);
+app.use("/", routes);
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
