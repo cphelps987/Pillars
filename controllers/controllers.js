@@ -25,4 +25,14 @@ router.get('/chapiter', function(req, res) {
 
 });
 
+
+//TEST LINKS
+router.get('/chattest', function(req, res) {
+
+  res.render("chattest.handlebars");
+
+});
+
+
+
 module.exports = router;
