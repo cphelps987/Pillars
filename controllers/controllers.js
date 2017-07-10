@@ -13,4 +13,16 @@ router.get('/admin', function(req, res) {
 
 });
 
+router.get('/plinth', function(req, res) {
+
+  res.render("chat.handlebars");
+
+});
+
+router.get('/chapiter', function(req, res) {
+
+  res.render("resources.handlebars");
+
+});
+
 module.exports = router;
