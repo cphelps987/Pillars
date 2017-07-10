@@ -47,7 +47,7 @@
 * Make sure all of the packages/dbs work with the frontend
 * Make sure we can set up multiple chats at one time
 * Figure out how to push passport data into database
-* **NEW LIBRARY!! (What kind of new library??)**
+* **NEW LIBRARY - browser notifications**
 * **Make sure chat deletes (orm)** 
 * **No cookies**
 * **Dont HAVE to login**
