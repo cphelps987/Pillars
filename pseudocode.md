@@ -85,6 +85,13 @@
 *
 *
 
+### ORM PSEUDOCODE
+* passport
+* username
+* password
+* link database for helpful resources
+* if "admin" > show EVERYTHING, if "user" > show links, chat titles.
+
 ### Disclaimers:
 * If this is a serious medical issue, please call 911
 * No one here is a professional psychiatrist.......
