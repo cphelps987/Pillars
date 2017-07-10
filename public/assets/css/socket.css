@@ -1,9 +1,38 @@
-body {
-	padding-top: 50px;
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
 }
 
-/*** Chat Style ***/
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
 /* Pages */
+
 .pages {
   height: 100%;
   margin: 0;
@@ -12,7 +41,7 @@ body {
 }
 
 .page {
-  height: 640px;
+  height: 100%;
   position: absolute;
   width: 100%;
 }

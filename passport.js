@@ -1,14 +1,16 @@
 var express = require('express');
+var path = require('path');
+
+
+
 
 module.exports = function (app) {
-
+    console.log("Passport Linked");
     var passport = require('passport');
     var Strategy = require('passport-local').Strategy;
-    var db = require('./db');
-
-
-    // Create a new Express application.
+// Create a new Express application.
     var app = express();
+    var db = app.use('./db', express.static(path.join(__dirname, 'db')));
 
 
     // Configure the local strategy for use by Passport.

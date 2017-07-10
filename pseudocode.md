@@ -1,7 +1,8 @@
 # Pseudo Code
 
 # MVP (Minimum Viable Product)
-* **A chat that is anonymous and deletes**
+* **A chat that is anonymous and deletes + have helpful resources**
+* **Make sure it fixes a problem**
 
 ## DATABASE INFO
 
@@ -60,11 +61,13 @@
 * Make sure all of the packages/dbs work with the frontend
 * Make sure we can set up multiple chats at one time
 * Figure out how to push passport data into database
-* **Make sure chat deletes** 
+* **NEW LIBRARY - browser notifications**
+* **Make sure chat deletes (orm)** 
 * **No cookies**
 * **Dont HAVE to login**
-* Search bar to search for chats
+* **Search bar to search for chats**
 * **private** chats
+* Look at google recaptcha (https://www.google.com/recaptcha/intro/)
 
 ## Pages (for html outline):
 
@@ -86,15 +89,22 @@
 ### Resources Page
 * Link + Description sections
 * Up/Down Votes
-* (Chapiter)
+* (Chapiter) - top of the pillar
 
 ### Chat Room Page:
-* (Plinth)
+* (Plinth) - base of a pillar
 
 ### About Page
 *
 *
 *
+
+### ORM PSEUDOCODE
+* passport
+* username
+* password
+* link database for helpful resources
+* if "admin" > show EVERYTHING, if "user" > show links, chat titles.
 
 ### Disclaimers:
 * If this is a serious medical issue, please call 911
@@ -103,10 +113,15 @@
 ### Stuff we need to talk about:
 * Do we need a separate database for the chat or can we rely on socket io?
 * Does socket io have a delete function?
-* 
+
 
 ### Future Developments:
 * Real-Time Help
+* Local chat rooms
 * If the person was helpful
 * Causes (Meetup for aids, cancer, etc)
 * Gives you default icon options
+
+### Presentation
+* Video of it working
+* Send link out to class channel and have people test it?
