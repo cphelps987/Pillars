@@ -18,6 +18,7 @@ app.set("view engine","handlebars");
 
 var routes = require('./controllers/controllers.js');
 require('./passport.js')
+require('./socketIO.js')
 
 app.use("/", routes);
 
