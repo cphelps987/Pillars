@@ -3,32 +3,46 @@
 # MVP (Minimum Viable Product)
 * **A chat that is anonymous and deletes**
 
-## USER DATABASE
-* link (Helpful Resources table)
+## DATABASE INFO
+
+## CHATROOM TABLE
+* ID (primary key)
+* link (url)
+* title
+* moderators 
+* moderation level
+* flagged
+* password
+
+## USER TABLE
+* ID (primary key)
+* UserName
+* Password
 * role (user, admin, mod)
-* chat room titles(?)
+* verifiedUser
+* link
 * userScore (based on up votes)
 
-## ADMIN DATABASE
-* role (user, admin, mod)
-* verifiedUser 
-* link
-* flags
-
-## HELPFUL RESOURCES DATABASE(join into the other 2)
+## HELPFUL RESOURCES TABLE
+* ID (primary key)
 * title
+* facebook
+* twitter
 * description
 * link
+* userScore (based on up votes)
 
-## FAQ DATABASE:
+## FAQ TABLE
+* ID (primary key)
 * question
 * answer
 
-## NOTSONICE DATABASE
+## NOTSONICE TABLE
 * **words to filter through**
-* racist
-* offensive
-* sexist
+* ID (primary key)
+* wordlist 
+* category: racist, offensive, sexist
+
 
 ### NPMS:
 * socket io
