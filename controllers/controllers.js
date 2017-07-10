@@ -13,4 +13,10 @@ router.get('/admin', function(req, res) {
 
 });
 
+router.get('/plinth', function(req, res) {
+
+  res.render("chat.handlebars");
+
+});
+
 module.exports = router;
