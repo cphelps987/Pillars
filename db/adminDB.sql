@@ -9,6 +9,6 @@ CREATE TABLE adminTable
 	userNames varchar(255) NOT NULL,
 	verifiedUsers varchar(255) NOT NULL,
 	links varchar(255) NOT NULL,
-	flags INT AUTO_INCREMENT NOT NULL,
+	flags INT NOT NULL,
 	PRIMARY KEY (id)
 );
