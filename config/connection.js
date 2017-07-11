@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "userDB"
+  database: "pillars"
 });
 
 // Make connection.

@@ -110,7 +110,7 @@ var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : '',
-    database: "userDB"
+    database: "pillars"
 });
 
 //connection.query('USE usertest');
