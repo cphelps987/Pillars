@@ -110,7 +110,7 @@ var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : '',
-    database: "usertest"
+    database: "userDB"
 });
 
 //connection.query('USE usertest');
