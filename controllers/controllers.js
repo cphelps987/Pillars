@@ -52,6 +52,11 @@ router.get('/user', function(req, res) {
 
 });
 
+router.get('/createaccount', function(req, res) {
+
+  res.render("createaccount.handlebars");
+
+});
 
 //CHAT
 router.get('/plinth', function(req, res) {
