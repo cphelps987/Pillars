@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var passport = require("passport");
 
 //BASE
 router.get('/', function(req, res) {
@@ -52,9 +53,9 @@ router.get('/user', function(req, res) {
 
 });
 
-router.get('/createaccount', function(req, res) {
+router.get('/signup', function(req, res) {
 
-  res.render("createaccount.handlebars");
+  res.render("signup.handlebars");
 
 });
 
@@ -65,16 +66,12 @@ router.get('/plinth', function(req, res) {
 
 });
 
-
 //RESOURSES
 router.get('/chapiter', function(req, res) {
 
   res.render("resources.handlebars");
 
 });
-
-
-
 
 //TEST LINKS
 router.get('/chattest', function(req, res) {
@@ -83,6 +80,18 @@ router.get('/chattest', function(req, res) {
 
 });
 
+router.get('/register', function(req, res) {
 
+    res.render("signup");
+
+});
+
+router.post('/register',
+    passport.authenticate('local-signup', {
+        successRedirect: '/',
+        failureRedirect: '/register',
+        failureFlash: true
+    })
+);
 
 module.exports = router;
