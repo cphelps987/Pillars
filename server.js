@@ -28,7 +28,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 // app.use(passport.initialize());
 // app.use(passport.session());
 
-exports.orm = require('./config/orm.js');
+orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 
@@ -39,7 +39,11 @@ require('./chalk.js');
 
 app.use("/", routes);
 
+orm.selectWhere("chatTable", "link", "https");
+
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
 });
+
+
 
