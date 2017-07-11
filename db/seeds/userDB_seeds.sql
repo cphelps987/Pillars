@@ -8,3 +8,4 @@ VALUES
   (6, 'user6','password6','verified', 'admin', '2', 'https://www.google6.com/'),
   (7, 'user7','password7','verified', 'user', '7', 'https://www.google7.com/');
 
+
