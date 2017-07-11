@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     database: "pillars"
 });
 
-//connection.query('USE usertest');
+// Used manjeshpv on githubs code: https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
