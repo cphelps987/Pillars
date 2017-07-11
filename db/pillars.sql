@@ -57,4 +57,5 @@ CREATE TABLE `users_chats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(15),
   `chatTableid` int(15),
-)
+  PRIMARY KEY (`id`)
+);
