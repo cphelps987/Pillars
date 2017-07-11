@@ -1,11 +1,21 @@
-require("./connection.js")
+connection = require("./connection.js");
+
+var orm = {
+    selectWhere: function (tableInput, colToSearch, valOfCol) {
+        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+        connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
+            console.log('result', result);
+        });
+    }
+}
+
 
 var records = [
     { id: 1, username: 'jack', password: 'secret', displayName: 'Jack', emails: [ { value: 'jack@example.com' } ] }
     , { id: 2, username: 'jill', password: 'birthday', displayName: 'Jill', emails: [ { value: 'jill@example.com' } ] }
 ];
 
-function connectToDB(){
+exports.connectToDB = function(id, cb){
     connection.connect(function(err){
         if (err) {
             console.error('error connection:', err.stack);
@@ -15,7 +25,6 @@ function connectToDB(){
     });
 }
 
-module.exports.connectToDB = connectToDB;
 
 exports.findById = function(id, cb) {
     process.nextTick(function() {
@@ -39,3 +48,8 @@ exports.findByUsername = function(username, cb) {
         return cb(null, null);
     });
 }
+
+// GIVE ADMIN ALL ACCESS
+// GIVE USER LIMITED ACCESS
+
+module.exports = orm;
