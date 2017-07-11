@@ -11,5 +11,6 @@ CREATE TABLE linksTable
 	link varchar(255) NOT NULL,
 	facebook varchar(255) NOT NULL,
 	twitter varchar(255) NOT NULL,
+	userScore int NOT NULL,
 	PRIMARY KEY (id)
 );
