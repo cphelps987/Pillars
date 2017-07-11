@@ -39,7 +39,7 @@ require('./chalk.js');
 
 app.use("/", routes);
 
-orm.selectWhere("chatTable", "link", "https");
+orm.selectWhere("chatTable", "link", "https://www.google1.com/");
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
