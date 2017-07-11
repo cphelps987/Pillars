@@ -53,6 +53,12 @@ router.get('/user', function(req, res) {
 
 });
 
+router.get('/login', function(req, res) {
+
+  res.render("login.handlebars");
+
+});
+
 router.get('/signup', function(req, res) {
 
   res.render("signup.handlebars");
