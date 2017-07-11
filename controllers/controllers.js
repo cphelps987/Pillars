@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var passport = require("passport");
 
 //BASE
 router.get('/', function(req, res) {
@@ -82,6 +83,20 @@ router.get('/chattest', function(req, res) {
   res.render("chattest.handlebars");
 
 });
+
+router.get('/register', function(req, res) {
+
+    res.render("signup");
+
+});
+
+router.post('/register',
+    passport.authenticate('local-signup', {
+        successRedirect: '/',
+        failureRedirect: '/register',
+        failureFlash: true
+    })
+);
 
 
 

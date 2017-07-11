@@ -22,17 +22,17 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 //flash to show a message if there's an incorrect login
-//app.use(flash());
+app.use(flash());
 
 //passport middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
+ app.use(passport.initialize());
+ app.use(passport.session());
 
 orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 
-require('./passport.js');
+require('./passport.js')(passport);
 require('./emoji.js');
 require('./chalk.js');
 // require('./socketIO.js')
@@ -40,6 +40,8 @@ require('./chalk.js');
 app.use("/", routes);
 
 orm.selectWhere("chatTable", "link", "https://www.google1.com/");
+
+
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
