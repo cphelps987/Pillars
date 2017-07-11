@@ -122,6 +122,7 @@
 * Causes (Meetup for aids, cancer, etc)
 * Gives you default icon options
 * Add password reset and send user email
+* Prevent bots by making sure you cant say the same thing twice
 
 ### Presentation
 * Video of it working
