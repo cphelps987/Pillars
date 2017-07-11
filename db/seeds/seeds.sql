@@ -24,8 +24,14 @@ VALUES
   (6, 'question6','answer6'),
   (7, 'question7','answer7');
 
-INSERT INTO `linksTable` (`id`, `title`, `description`, `link`, `facebook`, `twitter`, `userScore`)
+INSERT INTO `linksTable` (`id`, `title`, `description`, `links`, `facebook`, `twitter`, `userScore`)
 VALUES
+-- INSERT INTO `linksTable` (`title`, `description`, `links`, `userScore`, `facebook`, `twitter`)
+-- VALUES
+-- ('Coming Out to Parents','Coming out to parents', 'http://www.huffingtonpost.com/2013/10/11/coming-out-resources_n_4085658.html'),
+-- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
+-- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
+
   (1, 'title1','description1','https://www.google1.com/', 'facebook1', 'twitter1', 23),
   (2, 'title2','description1','https://www.google2.com/', 'facebook2', 'twitter3', 22),
   (3, 'title3','description1','https://www.google3.com/', 'facebook3', 'twitter2', 11),

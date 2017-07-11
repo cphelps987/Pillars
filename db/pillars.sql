@@ -34,15 +34,6 @@ CREATE TABLE linksTable
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE notsoniceTable
-(
-	id int NOT NULL AUTO_INCREMENT,
-	wordlist varchar(255) NOT NULL,
-	category varchar(255) NOT NULL,
-	PRIMARY KEY (id)
-);
-
-
 CREATE TABLE userTable
 (
 	id int NOT NULL AUTO_INCREMENT,
