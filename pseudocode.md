@@ -121,6 +121,7 @@
 * If the person was helpful
 * Causes (Meetup for aids, cancer, etc)
 * Gives you default icon options
+* Add password reset and send user email
 
 ### Presentation
 * Video of it working
