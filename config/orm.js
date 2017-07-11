@@ -1,4 +1,4 @@
-require("./config/connection.js")
+require("./connection.js")
 
 var records = [
     { id: 1, username: 'jack', password: 'secret', displayName: 'Jack', emails: [ { value: 'jack@example.com' } ] }
