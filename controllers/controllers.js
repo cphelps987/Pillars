@@ -78,10 +78,21 @@ router.get('/plinth/:title', function(req, res) {
       throw err;
     }
 
+		if (data) {
     res.render("chatroom.handlebars", { chattable: data });
+		console.log("RoomData", data);
+			}
+
+		else {
+		res.render("error.handlebars");
+			}
+
 
   });
 });
+
+
+
 
 //RESOURSES
 router.get('/chapiter', function(req, res) {
