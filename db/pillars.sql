@@ -27,10 +27,10 @@ CREATE TABLE linksTable
 	title varchar(255) NOT NULL,
 	description varchar(255) NOT NULL,
 	link varchar(255) NOT NULL,
-	resourceScore int NOT NULL,
 	facebook varchar(255) NULL,
 	twitter varchar(255) NULL,
 	other VARCHAR (255) NULL,
+	resourceScore int NOT NULL,
 	PRIMARY KEY (id)
 );
 

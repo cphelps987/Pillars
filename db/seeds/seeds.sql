@@ -24,7 +24,7 @@ VALUES
   (6, 'question6','answer6'),
   (7, 'question7','answer7');
 
-INSERT INTO `linksTable` (`id`, `title`, `description`, `links`, `facebook`, `twitter`, `userScore`)
+INSERT INTO `linksTable` (`id`, `title`, `description`, `link`, `facebook`, `twitter`,`other` ,`resourceScore`)
 VALUES
 -- INSERT INTO `linksTable` (`title`, `description`, `links`, `userScore`, `facebook`, `twitter`)
 -- VALUES
@@ -32,13 +32,13 @@ VALUES
 -- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
 -- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
 
-  (1, 'title1','description1','https://www.google1.com/', 'facebook1', 'twitter1', 23),
-  (2, 'title2','description1','https://www.google2.com/', 'facebook2', 'twitter3', 22),
-  (3, 'title3','description1','https://www.google3.com/', 'facebook3', 'twitter2', 11),
-  (4, 'title4','description1','https://www.google4.com/', 'facebook4', 'twitter4', 25),
-  (5, 'title5','description1','https://www.google5.com/', 'facebook5', 'twitter5', 41),
-  (6, 'title6','description1','https://www.google6.com/', 'facebook6', 'twitter2', 29),
-  (7, 'title7','description1','https://www.google7.com/', 'facebook7', 'twitter7', 22);
+  (1, 'title1','description1','https://www.google1.com/', 'facebook1', 'twitter1','otherLink', 23),
+  (2, 'title2','description1','https://www.google2.com/', 'facebook2', 'twitter3','otherLink', 22),
+  (3, 'title3','description1','https://www.google3.com/', 'facebook3', 'twitter2','otherLink', 11),
+  (4, 'title4','description1','https://www.google4.com/', 'facebook4', 'twitter4','otherLink', 25),
+  (5, 'title5','description1','https://www.google5.com/', 'facebook5', 'twitter5','otherLink', 41),
+  (6, 'title6','description1','https://www.google6.com/', 'facebook6', 'twitter2','otherLink', 29),
+  (7, 'title7','description1','https://www.google7.com/', 'facebook7', 'twitter7','otherLink', 22);
 
 INSERT INTO `offensiveTable` (`id`, `word`, `type`)
 VALUES
