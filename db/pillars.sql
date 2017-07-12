@@ -39,6 +39,7 @@ CREATE TABLE userTable
 	id int NOT NULL AUTO_INCREMENT,
 	userName varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
+	email varchar(255),
 	role varchar(255),
 	verifiedUser varchar(255),
 	userScore int,
