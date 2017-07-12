@@ -12,7 +12,6 @@
 * title
 * moderators 
 * moderation level
-* flagged
 * password
 
 ## USER TABLE
@@ -21,8 +20,8 @@
 * Password
 * role (user, admin, mod)
 * verifiedUser
-* link
 * userScore (based on up votes)
+* flagged
 
 ## HELPFUL RESOURCES TABLE
 * ID (primary key)
