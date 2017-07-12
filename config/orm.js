@@ -4,21 +4,23 @@ var orm = {
     selectWhere: function (tableInput, colToSearch, valOfCol) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
         connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
-            console.log('SelectWhere Result ', result);
+           //console.log('SelectWhere Result ', result);
         });
     },
 
-    test: function (col, table) {
-        var queryString = "SELECT ? FROM ??";
-        connection.query(queryString, [col, table], function (err, result) {
-            console.log('Test Result ', result);
+    selectUser: function (col, col2, col3, table, col4, val) {
+        var queryString = "SELECT ?? ,?? ,?? FROM ?? WHERE ?? = ?";
+       // console.log("QS", queryString);
+        //SELECT `role`, `username`, `verifiedUser` FROM `userTable` WHERE `verifiedUser` = 'verified' OR 'notVerified';
+        connection.query(queryString, [col, col2, col3, table, col4, val], function (err, result) {
+            console.log('User Result ', result);
         });
     },
 
-    selectUser: function (tableInput, colToSearch, valOfCol) {
+    adminView: function (tableInput, colToSearch, valOfCol) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-        connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
-            console.log('SelectUser Result ', result);
+        connection.query(queryString, [], function (err, result) {
+            //console.log('adminView Result ', result);
         });
     }
 };//end of orm
