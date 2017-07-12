@@ -81,17 +81,26 @@ router.get('/plinth/:title', function(req, res) {
 		if (data) {
     res.render("chatroom.handlebars", { chattable: data });
 		console.log("RoomData", data);
-			}
 
-		else {
+			} else {
+
 		res.render("error.handlebars");
+				console.log("MF ERROR MF");
 			}
-
 
   });
 });
 
+//ADMIN
+router.get('/admin', function(req, res) {
 
+  connection.query("SELECT * FROM faqtable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render("admin.handlebars", { faqtable: data });
+  });
+});
 
 
 //RESOURSES
