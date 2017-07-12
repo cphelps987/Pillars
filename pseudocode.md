@@ -126,3 +126,22 @@
 ### Presentation
 * Video of it working
 * Send link out to class channel and have people test it?
+
+## STATUS ON JULY 12
+
+## Working
+* chat (working seperately)
+* passport
+* handlebars rendering (talking to server)
+
+## Need
+* Put data into databases
+* Create dummy users 
+* **CONTENT**
+* Make it look prettyyyy
+* **Add socket io chat to page**
+* socket io last resort (redirect to chat page)
+
+
+## Future
+* Have resources load with the chat page 
