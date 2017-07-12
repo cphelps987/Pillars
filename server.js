@@ -48,10 +48,11 @@ orm.selectWhere("chatTable", "link", "https://www.google1.com/");
 
 
 
-// This calls out the user information of those who have been flagged 3 times
-orm.selectWhere("userTable", "flagged", 3);
-
+// This calls out the user information of those who have been flagged 3 or more times
 orm.selectFlagged("userTable", "flagged", 2, "flagged");
+
+// This calls out the questions and asnwers from the FAQ table
+orm.selectFAQ("questions", "answers", "faqTable");
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);
