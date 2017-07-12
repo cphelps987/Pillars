@@ -17,7 +17,12 @@ router.get('/about', function(req, res) {
 
 router.get('/faq', function(req, res) {
 
-  res.render("about.handlebars");
+  connection.query("SELECT * FROM faqtable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render("faq.handlebars", { faqtable: data });
+  });
 
 });
 
@@ -95,7 +100,7 @@ router.get('/register', function(req, res) {
 router.post('/register',
     passport.authenticate('local-signup', {
         successRedirect: '/',
-        failureRedirect: '/register',
+        failureRedirect: '/signup',
         failureFlash: true
     })
 );
