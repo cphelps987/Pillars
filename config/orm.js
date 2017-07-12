@@ -13,6 +13,13 @@ var orm = {
         connection.query(queryString, [tableInput, colToSearch, valOfCol, colSearch], function (err, result) {
             console.log('flagged', result);
         });
+    },
+
+    selectFAQ: function (colToSearch, colSearch, tableInput) {
+        var queryString = "SELECT ?, ? FROM ??";
+        connection.query(queryString, [colToSearch, colSearch, tableInput], function (err, result) {
+            console.log('faq', result);
+        });
     }
 }
 
