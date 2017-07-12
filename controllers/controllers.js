@@ -71,6 +71,17 @@ router.get('/plinth', function(req, res) {
 
 });
 
+router.get('/plinth/:title', function(req, res) {
+  connection.query("SELECT * FROM chattable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    res.render("chatroom.handlebars", { chattable: data });
+
+  });
+});
+
 //RESOURSES
 router.get('/chapiter', function(req, res) {
 
@@ -102,7 +113,9 @@ router.post('/register',
 router.get('/login', function(req, res) {
 
     res.render("login");
-    console.log("LOGIN WORKKSSSSSSSSSS");
+
+    console.log("youre signed in");
+
 
 });
 
