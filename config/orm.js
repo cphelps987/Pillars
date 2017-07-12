@@ -4,7 +4,22 @@ var orm = {
     selectWhere: function (tableInput, colToSearch, valOfCol) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
         connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
-            console.log('result', result);
+           //console.log('SelectWhere Result ', result);
+        });
+    },
+
+    selectUser: function (col, col2, col3, table, col4, val) {
+        var queryString = "SELECT ?? ,?? ,?? FROM ?? WHERE ?? = ?";
+       // console.log("QS", queryString);
+        //SELECT `role`, `username`, `verifiedUser` FROM `userTable` WHERE `verifiedUser` = 'verified' OR 'notVerified';
+        connection.query(queryString, [col, col2, col3, table, col4, val], function (err, result) {
+            console.log('User Result ', result);
+        });
+    },
+    adminView: function (table, colToSearch, valOfCol) {
+        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+        connection.query(queryString, [table,], function (err, result) {
+            //console.log('adminView Result ', result);
         });
     },
 
@@ -22,7 +37,9 @@ var orm = {
         });
     }
 
-}
+
+};//end of orm
+
 
 
 var records = [

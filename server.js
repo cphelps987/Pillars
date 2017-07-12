@@ -31,7 +31,7 @@ app.use(flash());
 //express-session to keep the user logged in
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
 
-orm = require('./config/orm.js');
+var orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 
@@ -44,8 +44,15 @@ require('./chalk.js');
 app.use("/", routes);
 
 orm.selectWhere("chatTable", "link", "https://www.google1.com/");
+
+orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "verified");
+orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "notVerified");
+orm.adminView();
+
 //orm.selectwhere("")
 
+
+//(tableInput, colToSearch, valOfCol)
 
 
 // This calls out the user information of those who have been flagged 3 or more times
