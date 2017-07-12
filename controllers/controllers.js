@@ -53,9 +53,15 @@ router.get('/user', function(req, res) {
 
 });
 
-router.get('/createaccount', function(req, res) {
+router.get('/login', function(req, res) {
 
-  res.render("createaccount.handlebars");
+  res.render("login.handlebars");
+
+});
+
+router.get('/signup', function(req, res) {
+
+  res.render("signup.handlebars");
 
 });
 
@@ -66,16 +72,12 @@ router.get('/plinth', function(req, res) {
 
 });
 
-
 //RESOURSES
 router.get('/chapiter', function(req, res) {
 
   res.render("resources.handlebars");
 
 });
-
-
-
 
 //TEST LINKS
 router.get('/chattest', function(req, res) {
@@ -97,7 +99,5 @@ router.post('/register',
         failureFlash: true
     })
 );
-
-
 
 module.exports = router;

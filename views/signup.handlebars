@@ -1,31 +1,29 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-3 enter_section">
-        <div class="loginBody">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="sectionerReg">
-                        <form method="post" action="/register">
-                            <h2 class="text-center"><u>Register</u></h2>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="loginBody">
+				<div class="sectionerReg">
+					<form method="post" action="/register">
+							<h2 class="text-center">Register</h2>
+								<div class="form-group">
+									<label>Username</label>
+									<input type="text" class="form-control" placeholder="Username" name="userName">
+								</div>
+							<div class="form-group">
+									<label>Password</label>
+									<input type="password" class="form-control" placeholder="Password Between 7 - 20 Characters" name="password">
+							</div>
+							<div class="form-group">
+								<label>Email address <small>(Not Required only used for password reset)</small></label>
+								<input type="email" class="form-control" placeholder="Email" name="email">
+							</div>
 
-                            <div class="form-group">
+							<button type="submit" class="btn btn-primary" value="register">Submit</button>
 
-                                <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Username" name="userName">
-
-                            </div>
-
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control"
-                                       placeholder="Password Between 7 - 20 Characters" name="password">
-                            </div>
-                            <button type="submit" class="btn btn-primary" value="register">Submit</button>
-                        </form>
-                    </div>
-                    <br>
-                    <button type="button" class="btn btn-default"><a href="/login">Already a member?</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
+							<button type="button" class="btn btn-default"><a href="/login">Already a member?</a></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

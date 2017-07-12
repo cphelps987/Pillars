@@ -27,6 +27,14 @@
 					<button type="submit" class="btn btn-default">Search</button>
 				</form></li>
 
+
+
+	{{#if user.loggedin}}
+            <li><a href="user">Hello {{user.name}}</a></li>
+						<li><a href="#">Logout</a></li>
+	{{/if}}
+
+	{{#else}}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -37,6 +45,9 @@
 						<li><a href="signup">Create Account</a></li>
           </ul>
         </li>
+	{{/else}}
+
+
 
       </ul>
     </div>
