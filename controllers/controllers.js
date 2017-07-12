@@ -17,7 +17,12 @@ router.get('/about', function(req, res) {
 
 router.get('/faq', function(req, res) {
 
-  res.render("about.handlebars");
+  connection.query("SELECT * FROM faqtable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render("faq.handlebars", { faqtable: data });
+  });
 
 });
 
@@ -50,12 +55,6 @@ router.get('/admin', function(req, res) {
 router.get('/user', function(req, res) {
 
   res.render("user.handlebars");
-
-});
-
-router.get('/login', function(req, res) {
-
-  res.render("login.handlebars");
 
 });
 
@@ -95,7 +94,22 @@ router.get('/register', function(req, res) {
 router.post('/register',
     passport.authenticate('local-signup', {
         successRedirect: '/',
-        failureRedirect: '/register',
+        failureRedirect: '/signup',
+        failureFlash: true
+    })
+);
+
+router.get('/login', function(req, res) {
+
+    res.render("login");
+    console.log("youre signed in");
+
+});
+
+router.post('/login',
+    passport.authenticate('local-login', {
+        successRedirect: '/',
+        failureRedirect: '/',
         failureFlash: true
     })
 );
