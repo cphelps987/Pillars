@@ -4,10 +4,24 @@ var orm = {
     selectWhere: function (tableInput, colToSearch, valOfCol) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
         connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
-            console.log('result', result);
+            console.log('SelectWhere Result ', result);
+        });
+    },
+
+    test: function (table, col) {
+        var queryString = "SELECT * FROM ?? WHERE ??";
+        connection.query(queryString, [table, col], function (err, result) {
+            console.log('Test Result ', result);
+        });
+    },
+
+    selectUser: function (tableInput, colToSearch, valOfCol) {
+        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+        connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
+            console.log('SelectUser Result ', result);
         });
     }
-}
+};//end of orm
 
 
 var records = [
