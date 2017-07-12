@@ -4,15 +4,15 @@
 -- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
 -- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
 
-INSERT INTO `chatTable` (`id`, `link`, `title`, `moderators`, `moderation_level`, `flagged`, `password`)
+INSERT INTO `chatTable` (`id`, `link`, `title`, `moderators`, `moderation_level`, `password`)
 VALUES
-  (1, 'https://www.google1.com/','google1','Moderator1', 'moderation_level1', '1', 'password1'),
-  (2, 'https://www.google2.com/','google2','Moderator2', 'moderation_level2', '3', 'password2'),
-  (3, 'https://www.google3.com/','google3','Moderator3', 'moderation_level3', '2', 'password3'),
-  (4, 'https://www.google4.com/','google4','Moderator4', 'moderation_level4', '4', 'password4'),
-  (5, 'https://www.google5.com/','google5','Moderator5', 'moderation_level5', '5', 'password5'),
-  (6, 'https://www.google6.com/','google6','Moderator6', 'moderation_level6', '2', 'password6'),
-  (7, 'https://www.google7.com/','google7','Moderator7', 'moderation_level7', '7', 'password7');
+  (1, 'https://www.google1.com/','google1','Moderator1', 'moderation_level1', 'password1'),
+  (2, 'https://www.google2.com/','google2','Moderator2', 'moderation_level2', 'password2'),
+  (3, 'https://www.google3.com/','google3','Moderator3', 'moderation_level3', 'password3'),
+  (4, 'https://www.google4.com/','google4','Moderator4', 'moderation_level4', 'password4'),
+  (5, 'https://www.google5.com/','google5','Moderator5', 'moderation_level5', 'password5'),
+  (6, 'https://www.google6.com/','google6','Moderator6', 'moderation_level6', 'password6'),
+  (7, 'https://www.google7.com/','google7','Moderator7', 'moderation_level7', 'password7');
 
 INSERT INTO `faqTable` (`id`, `questions`, `answers`)
 VALUES
@@ -765,13 +765,13 @@ VALUES
 	(721,'yobbo',''),
 	(722,'zoophile','');
 
-INSERT INTO `userTable` (`id`, `userName`, `password`, `verifiedUser`, `role`, `userScore`, `link`)
+INSERT INTO `userTable` (`id`, `userName`, `password`, `verifiedUser`, `role`, `userScore`, `link`, `flagged`)
 VALUES
-  (1, 'user1','password1','verified', 'user', '1', 'https://www.google1.com/'),
-  (2, 'user2','password2','notVerified', 'mod', '3', 'https://www.google2.com/'),
-  (3, 'user3','password3','verified', 'mod', '2', 'https://www.google3.com/'),
-  (4, 'user4','password4','verified', 'user', '4', 'https://www.google4.com/'),
-  (5, 'user5','password5','notVerified', 'user', '5', 'https://www.google5.com/'),
-  (6, 'user6','password6','verified', 'admin', '2', 'https://www.google6.com/'),
-  (7, 'user7','password7','verified', 'user', '7', 'https://www.google7.com/');
+  (1, 'user1','password1','verified', 'user', 1, 'https://www.google1.com/', 2),
+  (2, 'user2','password2','notVerified', 'mod', 3, 'https://www.google2.com/', 4),
+  (3, 'user3','password3','verified', 'mod', 2, 'https://www.google3.com/', 3),
+  (4, 'user4','password4','verified', 'user', 4, 'https://www.google4.com/', 1),
+  (5, 'user5','password5','notVerified', 'user', 5, 'https://www.google5.com/', 1),
+  (6, 'user6','password6','verified', 'admin', 2, 'https://www.google6.com/', 2),
+  (7, 'user7','password7','verified', 'user', 7, 'https://www.google7.com/', 5);
 

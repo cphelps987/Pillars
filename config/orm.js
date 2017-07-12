@@ -29,17 +29,6 @@ var records = [
     , { id: 2, username: 'jill', password: 'birthday', displayName: 'Jill', emails: [ { value: 'jill@example.com' } ] }
 ];
 
-exports.connectToDB = function(id, cb){
-    connection.connect(function(err){
-        if (err) {
-            console.error('error connection:', err.stack);
-            return
-        }
-        console.log('connected to MySQL DB')
-    });
-}
-
-
 exports.findById = function(id, cb) {
     process.nextTick(function() {
         var idx = id - 1;
@@ -61,6 +50,26 @@ exports.findByUsername = function(username, cb) {
         }
         return cb(null, null);
     });
+
+exports.connectToDB = function(id, cb){
+    connection.connect(function(err){
+        if (err) {
+            console.error('error connection:', err.stack);
+            return
+        }
+        console.log('connected to MySQL DB')
+    });
+}
+
+module.exports.connectToDB = connectToDB;
+
+// passport login select database query
+function findUser(username, callback){
+    connection.query('SELECT * FROM userTable WHERE ?', {username: username}, function(err, user){
+        callback(err, user)
+    })
+}
+module.exports.findUser = findUser;
 }
 
 // GIVE ADMIN ALL ACCESS
