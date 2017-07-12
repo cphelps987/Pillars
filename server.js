@@ -48,6 +48,10 @@ orm.selectWhere("chatTable", "link", "https://www.google1.com/");
 
 
 
+// This calls out the user information of those who have been flagged 3 times
+orm.selectWhere("userTable", "flagged", 3);
+
+orm.selectFlagged("userTable", "flagged", 2, "flagged");
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);

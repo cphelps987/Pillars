@@ -6,6 +6,13 @@ var orm = {
         connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
             console.log('result', result);
         });
+    },
+
+    selectFlagged: function (tableInput, colToSearch, valOfCol, colSearch) {
+        var queryString = "SELECT * FROM ?? WHERE ?? > ? ORDER BY ?? ASC";
+        connection.query(queryString, [tableInput, colToSearch, valOfCol, colSearch], function (err, result) {
+            console.log('flagged', result);
+        });
     }
 
 }
