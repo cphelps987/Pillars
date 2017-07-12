@@ -138,10 +138,13 @@
 * Put data into databases
 * Create dummy users 
 * **CONTENT**
-* Make it look prettyyyy
+* Add disclaimers and about us/contact page
+* Make it look pretty
 * **Add socket io chat to page**
 * socket io last resort (redirect to chat page)
+* call orm in connection js inside if statements!
 
 
 ## Future
 * Have resources load with the chat page 
+
