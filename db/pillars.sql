@@ -9,7 +9,6 @@ CREATE TABLE chatTable
 	title varchar(255),
 	moderators varchar(255),
 	moderation_level varchar(255),
-	flagged int,
 	password varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -40,10 +39,12 @@ CREATE TABLE userTable
 	id int NOT NULL AUTO_INCREMENT,
 	userName varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
+	email varchar(255),
 	role varchar(255),
 	verifiedUser varchar(255),
-	userScore int,
+	userScore int(15),
 	link varchar(255),
+	flagged int,
 	PRIMARY KEY (id)
 );
 

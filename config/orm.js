@@ -21,9 +21,25 @@ var orm = {
         connection.query(queryString, [table,], function (err, result) {
             //console.log('adminView Result ', result);
         });
+    },
+
+    selectFlagged: function (tableInput, colToSearch, valOfCol, colSearch) {
+        var queryString = "SELECT * FROM ?? WHERE ?? > ? ORDER BY ?? ASC";
+        connection.query(queryString, [tableInput, colToSearch, valOfCol, colSearch], function (err, result) {
+            console.log('flagged', result);
+        });
+    },
+
+    selectFAQ: function (colToSearch, colSearch, tableInput) {
+        var queryString = "SELECT ?, ? FROM ??";
+        connection.query(queryString, [colToSearch, colSearch, tableInput], function (err, result) {
+            console.log('faq', result);
+        });
     }
 
+
 };//end of orm
+
 
 
 var records = [
@@ -52,16 +68,6 @@ exports.findByUsername = function(username, cb) {
         }
         return cb(null, null);
     });
-
-exports.connectToDB = function(id, cb){
-    connection.connect(function(err){
-        if (err) {
-            console.error('error connection:', err.stack);
-            return
-        }
-        console.log('connected to MySQL DB')
-    });
-}
 
 module.exports.connectToDB = connectToDB;
 
