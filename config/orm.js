@@ -8,9 +8,9 @@ var orm = {
         });
     },
 
-    test: function (table, col) {
-        var queryString = "SELECT * FROM ?? WHERE ??";
-        connection.query(queryString, [table, col], function (err, result) {
+    test: function (col, table) {
+        var queryString = "SELECT ? FROM ??";
+        connection.query(queryString, [col, table], function (err, result) {
             console.log('Test Result ', result);
         });
     },
