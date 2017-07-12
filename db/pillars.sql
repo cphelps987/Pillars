@@ -43,9 +43,15 @@ CREATE TABLE userTable
 	role varchar(255),
 	verifiedUser varchar(255),
 	userScore int(15),
-	link varchar(255),
 	flagged int,
 	PRIMARY KEY (id)
+);
+
+CREATE TABLE `users_chats` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(15),
+  `chatTableid` int(15),
+  PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `offensiveTable` (
@@ -55,9 +61,4 @@ CREATE TABLE `offensiveTable` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `users_chats` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `userid` int(15),
-  `chatTableid` int(15),
-  PRIMARY KEY (`id`)
-);
+
