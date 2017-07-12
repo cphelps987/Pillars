@@ -43,16 +43,16 @@ require('./chalk.js');
 
 app.use("/", routes);
 
+//test
 orm.selectWhere("chatTable", "link", "https://www.google1.com/");
 
-orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "verified");
-orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "notVerified");
-orm.adminView();
+orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "user");
+orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "mod");
+orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "admin");
 
-//orm.selectwhere("")
+orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable");
 
-
-//(tableInput, colToSearch, valOfCol)
+orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userTable");
 
 
 // This calls out the user information of those who have been flagged 3 or more times
