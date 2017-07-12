@@ -21,26 +21,29 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
-//flash to show a message if there's an incorrect login
+//flash to show a message on incorrect login
 app.use(flash());
 
 //passport middleware
  app.use(passport.initialize());
  app.use(passport.session());
 
+//express-session to keep the user logged in
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
+
 orm = require('./config/orm.js');
 
 var routes = require('./controllers/controllers.js');
 
-require('./passport.js')(passport);
 require('./emoji.js');
+require('./passport.js')(passport);
 require('./chalk.js');
+
 // require('./socketIO.js')
 
 app.use("/", routes);
 
 orm.selectWhere("chatTable", "link", "https://www.google1.com/");
-
 
 
 app.listen(port, function () {

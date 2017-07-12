@@ -9,14 +9,18 @@ var connection = mysql.createConnection({
     database: "pillars"
 });
 
-// Used manjeshpv on githubs code: https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84
+// ------ Used manjeshpv on githubs code: https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84 ------
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 
+    console.log("Fuck you, passport works")
+
     // =========================================================================
     // passport session setup ==================================================
     // =========================================================================
+
+
     // required for persistent login sessions
     // passport needs ability to serialize and unserialize users out of session
 
@@ -34,6 +38,8 @@ module.exports = function(passport) {
     // =========================================================================
     // LOCAL SIGNUP ============================================================
     // =========================================================================
+
+
     // we are using named strategies since we have one for login and one for signup
     // by default, if there was no name, it would just be called 'local'
 
@@ -77,6 +83,8 @@ module.exports = function(passport) {
     // =========================================================================
     // LOCAL LOGIN =============================================================
     // =========================================================================
+
+
     // we are using named strategies since we have one for login and one for signup
     // by default, if there was no name, it would just be called 'local'
 
