@@ -16,13 +16,13 @@ var orm = {
             console.log('User Result ', result);
         });
     },
-
-    adminView: function (tableInput, colToSearch, valOfCol) {
+    adminView: function (table, colToSearch, valOfCol) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-        connection.query(queryString, [], function (err, result) {
+        connection.query(queryString, [table,], function (err, result) {
             //console.log('adminView Result ', result);
         });
     }
+
 };//end of orm
 
 
