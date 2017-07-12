@@ -58,12 +58,6 @@ router.get('/user', function(req, res) {
 
 });
 
-router.get('/login', function(req, res) {
-
-  res.render("login.handlebars");
-
-});
-
 router.get('/signup', function(req, res) {
 
   res.render("signup.handlebars");
@@ -75,6 +69,17 @@ router.get('/plinth', function(req, res) {
 
   res.render("chat.handlebars");
 
+});
+
+router.get('/plinth/:title', function(req, res) {
+  connection.query("SELECT * FROM chattable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    res.render("chatroom.handlebars", { chattable: data });
+
+  });
 });
 
 //RESOURSES
@@ -101,6 +106,21 @@ router.post('/register',
     passport.authenticate('local-signup', {
         successRedirect: '/',
         failureRedirect: '/signup',
+        failureFlash: true
+    })
+);
+
+router.get('/login', function(req, res) {
+
+    res.render("login");
+    console.log("youre signed in");
+
+});
+
+router.post('/login',
+    passport.authenticate('local-login', {
+        successRedirect: '/',
+        failureRedirect: '/',
         failureFlash: true
     })
 );
