@@ -34,7 +34,7 @@ server.listen(port, function () {
 });
 
 // Routing
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/publicsocket'));
 /*  app.get('/', function(req, res){
     res.sendFile(__dirname + '/public/socketTest.html');
   });
