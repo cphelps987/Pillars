@@ -44,6 +44,9 @@ require('./chalk.js');
 app.use("/", routes);
 
 orm.selectWhere("chatTable", "link", "https://www.google1.com/");
+//orm.selectwhere("")
+
+
 
 
 app.listen(port, function () {
