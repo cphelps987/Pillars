@@ -113,7 +113,9 @@ router.post('/register',
 router.get('/login', function(req, res) {
 
     res.render("login");
+
     console.log("youre signed in");
+
 
 });
 

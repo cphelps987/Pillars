@@ -12,7 +12,6 @@
 * title
 * moderators 
 * moderation level
-* flagged
 * password
 
 ## USER TABLE
@@ -21,8 +20,8 @@
 * Password
 * role (user, admin, mod)
 * verifiedUser
-* link
 * userScore (based on up votes)
+* flagged
 
 ## HELPFUL RESOURCES TABLE
 * ID (primary key)
@@ -121,7 +120,28 @@
 * If the person was helpful
 * Causes (Meetup for aids, cancer, etc)
 * Gives you default icon options
+* Add password reset and send user email
+* Prevent bots by making sure you cant say the same thing twice
 
 ### Presentation
 * Video of it working
 * Send link out to class channel and have people test it?
+
+## STATUS ON JULY 12
+
+## Working
+* chat (working seperately)
+* passport
+* handlebars rendering (talking to server)
+
+## Need
+* Put data into databases
+* Create dummy users 
+* **CONTENT**
+* Make it look prettyyyy
+* **Add socket io chat to page**
+* socket io last resort (redirect to chat page)
+
+
+## Future
+* Have resources load with the chat page 
