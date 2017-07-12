@@ -147,4 +147,5 @@
 
 ## Future
 * Have resources load with the chat page 
+* Contact Page
 
