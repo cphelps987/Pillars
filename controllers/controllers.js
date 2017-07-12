@@ -72,7 +72,8 @@ router.get('/plinth', function(req, res) {
 });
 
 router.get('/plinth/:title', function(req, res) {
-  connection.query("SELECT * FROM chattable;", function(err, data) {
+  connection.query("SELECT * FROM chattable where title = ?", [req.params.title], function(err, data) {
+
     if (err) {
       throw err;
     }
