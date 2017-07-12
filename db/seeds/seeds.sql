@@ -4,20 +4,20 @@
 -- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
 -- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
 
-INSERT INTO `chatTable` (`id`, `link`, `title`, `moderators`, `moderation_level`, `password`)
+INSERT INTO `chatTable` (`id`, `title`, `moderators`, `moderation_level`, `password`)
 VALUES
-  (1, 'https://www.google1.com/','google1','Moderator1', 'moderation_level1', 'password1'),
-  (2, 'https://www.google2.com/','google2','Moderator2', 'moderation_level2', 'password2'),
-  (3, 'https://www.google3.com/','google3','Moderator3', 'moderation_level3', 'password3'),
-  (4, 'https://www.google4.com/','google4','Moderator4', 'moderation_level4', 'password4'),
-  (5, 'https://www.google5.com/','google5','Moderator5', 'moderation_level5', 'password5'),
-  (6, 'https://www.google6.com/','google6','Moderator6', 'moderation_level6', 'password6'),
-  (7, 'https://www.google7.com/','google7','Moderator7', 'moderation_level7', 'password7');
+  (1,'LGBTQ+','Moderator1', 'moderation_level1', 'password1'),
+  (2,'The Wall','Moderator2', 'moderation_level2', 'password2'),
+  (3,'Trump','Moderator3', 'moderation_level3', 'password3'),
+  (4,'Hispanics','Moderator4', 'moderation_level4', 'password4'),
+  (5,'Muslim','Moderator5', 'moderation_level5', 'password5'),
+  (6,'African-American','Moderator6', 'moderation_level6', 'password6'),
+  (7,'Disability','Moderator7', 'moderation_level7', 'password7');
 
 INSERT INTO `faqTable` (`id`, `questions`, `answers`)
 VALUES
-  (1, 'question1','answer1'),
-  (2, 'question2','answer2'),
+  (1, 'What is the purpose of this application?','answer1'),
+  (2, 'What do I do if someone in the chat is making me feel unsafe?','answer2'),
   (3, 'question3','answer3'),
   (4, 'question4','answer4'),
   (5, 'question5','answer5'),

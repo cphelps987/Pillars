@@ -5,7 +5,6 @@ USE pillars;
 CREATE TABLE chatTable
 (
 	id int NOT NULL AUTO_INCREMENT,
-	link varchar(255),
 	title varchar(255),
 	moderators varchar(255),
 	moderation_level varchar(255),
