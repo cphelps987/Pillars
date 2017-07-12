@@ -52,16 +52,6 @@ exports.findByUsername = function(username, cb) {
         return cb(null, null);
     });
 
-exports.connectToDB = function(id, cb){
-    connection.connect(function(err){
-        if (err) {
-            console.error('error connection:', err.stack);
-            return
-        }
-        console.log('connected to MySQL DB')
-    });
-}
-
 module.exports.connectToDB = connectToDB;
 
 // passport login select database query
