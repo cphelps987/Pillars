@@ -24,7 +24,7 @@ VALUES
   (6, 'question6','answer6'),
   (7, 'question7','answer7');
 
-INSERT INTO `linksTable` (`id`, `title`, `description`, `link`, `facebook`, `twitter`,`otherLink` ,`userScore`)
+INSERT INTO `linksTable` (`id`, `title`, `description`, `link`, `facebook`, `twitter`,`other` ,`resourceScore`)
 VALUES
 -- INSERT INTO `linksTable` (`title`, `description`, `links`, `userScore`, `facebook`, `twitter`)
 -- VALUES
