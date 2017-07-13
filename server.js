@@ -5,11 +5,15 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var session = require('express-session');
 var passport = require('passport');
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 var app = express();
 var port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
+app.use(express.static(__dirname + '/publicsocket'));
+
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
@@ -38,8 +42,7 @@ var routes = require('./controllers/controllers.js');
 require('./emoji.js');
 require('./passport.js')(passport);
 require('./chalk.js');
-
-// require('./socketIO.js')
+require('./socketIO.js')(io);
 
 app.use("/", routes);
 
@@ -49,8 +52,8 @@ orm.selectWhere("chatTable", "link", "https://www.google1.com/");
 orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "user");
 orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "mod");
 orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "admin");
-
-orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable");
+/*
+orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable");*/
 
 orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userTable");
 
@@ -61,9 +64,6 @@ orm.selectFlagged("userTable", "flagged", 2, "flagged");
 // This calls out the questions and asnwers from the FAQ table
 orm.selectFAQ("questions", "answers", "faqTable");
 
-app.listen(port, function () {
+server.listen(port, function () {
     console.log("Listening on PORT " + port);
 });
-
-
-
