@@ -772,6 +772,3 @@ VALUES
 	(720,'yeasty',''),
 	(721,'yobbo',''),
 	(722,'zoophile','');
-
-
-
