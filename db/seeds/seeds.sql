@@ -38,15 +38,15 @@ VALUES
   (4, 'Types & Symptoms of Eating Disorders','Eating disorders -- such as anorexia, bulimia, and binge eating disorder – include extreme emotions, attitudes, and behaviors surrounding weight and food issues. Eating disorders are serious emotional and physical problems that can have life-threatening consequences for females and males.','https://www.nationaleatingdisorders.org/types-symptoms-eating-disorders', 'https://www.facebook.com/NationalEatingDisordersAssociation', 'https://twitter.com/NEDAstaff','https://www.instagram.com/neda/', 25),
   (5, 'Racism','Racism is the belief that a particular race is superior or inferior to another, that a person’s social and moral traits are predetermined by his or her inborn biological characteristics. Racial separatism is the belief, most of the time based on racism, that different races should remain segregated and apart from one another.','https://www.adl.org/racism', 'facebook5', 'twitter5','otherLink', 41),
 
-INSERT INTO `userTable` (`id`, `userName`, `password`, `verifiedUser`, `role`, `userScore`, `flagged`)
+INSERT INTO `userTable` (`id`, `userName`, `password`, `email`, `role`, `verifiedUser`, `userScore`, `flagged`)
 VALUES
   (1, 'Sakina','SakinaPass','verified', 'admin', 1, 0),
   (2, 'Gabie','GabiePass','notVerified', 'admin', 3, 0),
   (3, 'Courtney','CourtPass','verified', 'admin', 2, 0),
   (4, 'Marc','MarcPass','verified', 'admin', 4, 0),
-  (5, 'Melanie','Melpass','verified', 'admin', 5, 0),
+  (5, 'Melanie','MelPass','verified', 'admin', 5, 0),
   (6, 'Bob','password6','verified', 'mod', 2, 0),
-  (7, 'Justin','password7','verified', 'user', 7, 2);
+  (7, 'Justin','password7','notVerified', 'user', 7, 2);
 
 INSERT INTO `offensiveTable` (`id`, `word`, `type`)
 VALUES
