@@ -9,6 +9,7 @@ CREATE TABLE chatTable
 	moderators varchar(255),
 	moderation_level varchar(255),
 	password varchar(255) NOT NULL,
+	type varchar(225),
 	PRIMARY KEY (id)
 );
 

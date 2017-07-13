@@ -4,19 +4,19 @@
 -- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
 -- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
 
-INSERT INTO `chatTable` (`id`, `title`, `moderators`, `moderation_level`, `password`)
+INSERT INTO `chatTable` (`id`, `title`, `moderators`, `moderation_level`, `password`, `type`)
 VALUES
-  (1,'LGBTQ+','Moderator1', 'moderation_level1', 'password1'),
+  (1,'LGBTQ+','Moderator1', 'moderation_level1', 'password1',''),
   (2,'The Wall','Moderator2', 'moderation_level2', 'password2'),
-  (3,'Trump','Moderator3', 'moderation_level3', 'password3'),
+  (3,'Trump','Moderator3', 'moderation_level3', 'password3', 'politics'),
   (4,'Hispanics','Moderator4', 'moderation_level4', 'password4'),
-  (5,'Muslim','Moderator5', 'moderation_level5', 'password5'),
-  (6,'African-American','Moderator6', 'moderation_level6', 'password6'),
-  (7,'Disability','Moderator7', 'moderation_level7', 'password7');
+  (5,'Muslim','Moderator5', 'moderation_level5', 'password5', ),
+  (6,'African-American','Moderator6', 'moderation_level6', 'password6',),
+  (7,'Disability','Moderator7', 'moderation_level7', 'password7','health');
 
 INSERT INTO `faqTable` (`id`, `questions`, `answers`)
 VALUES
-  (1, 'What is Pillars?','answer1'),
+  (1, 'What is Pillars?','Pillars allows for people to inter'),
   (2, 'What is the purpose of this application?','answer2'),
   (3, 'What do I do if someone in the chat is making me feel unsafe?','answer3'),
   (4, 'question4','answer4'),

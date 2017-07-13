@@ -44,7 +44,7 @@ require('./chalk.js');
 app.use("/", routes);
 
 //test
-orm.selectWhere("chatTable", "link", "https://www.google1.com/");
+orm.selectWhere("chatTable", "link", "http://www.huffingtonpost.com/2013/10/11/coming-out-resources_n_4085658.html");
 
 orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "user");
 orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "mod");
