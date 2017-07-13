@@ -2,6 +2,27 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 
+var orm = require('../config/orm.js');
+
+
+orm.selectWhere("chatTable", "link", "https://www.google1.com/");
+
+orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "verified");
+orm.selectUser("role", "username", "verifiedUser", "userTable", "verifiedUser", "notVerified");
+orm.adminView();
+
+//orm.selectwhere("")
+
+
+//(tableInput, colToSearch, valOfCol)
+
+
+// This calls out the user information of those who have been flagged 3 or more times
+orm.selectFlagged("userTable", "flagged", 2, "flagged");
+
+// This calls out the questions and asnwers from the FAQ table
+orm.selectFAQ("questions", "answers", "faqTable");
+
 //BASE
 router.get('/', function(req, res) {
 
