@@ -5,7 +5,15 @@ var passport = require("passport");
 //BASE
 router.get('/', function(req, res) {
 
-  res.render("index.handlebars");
+    console.log(req.session.passport);
+
+    if (req.session.passport != undefined) {
+
+        res.render("index", {loginUser: req.session.passport});
+
+    } else {
+        res.render("index")
+    }
 
 });
 
@@ -113,9 +121,6 @@ router.post('/register',
 router.get('/login', function(req, res) {
 
     res.render("login");
-
-    console.log("youre signed in");
-
 
 });
 

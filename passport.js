@@ -14,7 +14,6 @@ var connection = mysql.createConnection({
 // expose this function to our app using module.exports
 module.exports = function (passport) {
 
-    console.log("Fuck you, passport works")
 
     // =========================================================================
     // passport session setup ==================================================
@@ -95,9 +94,9 @@ module.exports = function (passport) {
             passwordField : 'password',
             passReqToCallback : true // allows us to pass back the entire request to the callback
         },
-        function(req, email, password, done) { // callback with email and password from our form
+        function(req, userName, password, done) { // callback with email and password from our form
 
-            connection.query("SELECT * FROM `userTable` WHERE `email` = '" + email + "'",function(err,rows){
+            connection.query("SELECT * FROM `userTable` WHERE `userName` = '" + userName + "'",function(err,rows){
                 if (err)
                     return done(err);
                 if (!rows.length) {
