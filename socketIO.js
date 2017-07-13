@@ -45,7 +45,7 @@ var io = require('socket.io')(app);*/
   });*/
 
 // Chatroom
-module.exports = function (io) {
+/*module.exports = function (io) {
 
 var numUsers = 0;
 
@@ -107,4 +107,4 @@ io.on('connection', function (socket) {
   });
 });
 console.log('OMG it is alive!');
-}
+}*/
