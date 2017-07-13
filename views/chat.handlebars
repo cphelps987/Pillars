@@ -1,21 +1,15 @@
 {{> chat/chats_popular}}
 <div class="container">
 	<div class="row">
-
-	</div>
-
-
-	<div class="row">
-
-		<div class="col-md-4 col-md-push-8">
-			<h1>Resources</h1>
-			{{resource.room}}
+		<div class="col-md-12">
+					<form method="post" action="/">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Create a Plinth">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Create</button>
+					</span>
+				</div>
+		</form>
 		</div>
-
-		<div class="col-md-8 col-md-pull-4">
-			<h1>{{chat.name}}</h1>
-			{{chat.room}}
-		</div>
-
 	</div>
 </div>
