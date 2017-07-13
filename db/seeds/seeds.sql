@@ -16,9 +16,9 @@ VALUES
 
 INSERT INTO `faqTable` (`id`, `questions`, `answers`)
 VALUES
-  (1, 'What is the purpose of this application?','answer1'),
-  (2, 'What do I do if someone in the chat is making me feel unsafe?','answer2'),
-  (3, 'question3','answer3'),
+  (1, 'What is Pillars?','answer1'),
+  (2, 'What is the purpose of this application?','answer2'),
+  (3, 'What do I do if someone in the chat is making me feel unsafe?','answer3'),
   (4, 'question4','answer4'),
   (5, 'question5','answer5'),
   (6, 'question6','answer6'),
@@ -32,23 +32,21 @@ VALUES
 -- ('Dating Violence','Dating Violence in Teens','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html'),
 -- ('Teen Health','Teen Health information','http://teenshealth.org/en/teens/your-mind/');
 
-  (1, 'title1','description1','https://www.google1.com/', 'facebook1', 'twitter1','otherLink', 23),
-  (2, 'title2','description1','https://www.google2.com/', 'facebook2', 'twitter3','otherLink', 22),
-  (3, 'title3','description1','https://www.google3.com/', 'facebook3', 'twitter2','otherLink', 11),
-  (4, 'title4','description1','https://www.google4.com/', 'facebook4', 'twitter4','otherLink', 25),
-  (5, 'title5','description1','https://www.google5.com/', 'facebook5', 'twitter5','otherLink', 41),
-  (6, 'title6','description1','https://www.google6.com/', 'facebook6', 'twitter2','otherLink', 29),
-  (7, 'title7','description1','https://www.google7.com/', 'facebook7', 'twitter7','otherLink', 22);
+  (1, 'Coming Out','In order to help guide you through this process, and also in celebration of National Coming Out Day, we at HuffPost Gay Voices wanted to provide you with a consolidated list of resources to try and make this experience easier.','http://www.huffingtonpost.com/2013/10/11/coming-out-resources_n_4085658.html', 'https://www.facebook.com/HuffPost', 'https://twitter.com/HuffPost','https://www.instagram.com/HuffPost/', 23),
+  (2, 'Dating Violence','Unhealthy relationships can start early and last a lifetime.  Teens often think some behaviors, like teasing and name calling, are a “normal” part of a relationship. However, these behaviors can become abusive and develop into more serious forms of violence.','https://www.cdc.gov/ViolencePrevention/intimatepartnerviolence/teen_dating_violence.html', 'https://www.facebook.com/CDC', 'https://twitter.com/CDCgov','https://www.instagram.com/CDCgov/', 22),
+  (3, 'Teen Health','Being healthy means dealing with the changes in your body - and your mind. Relationships, body image, families, emotions etc. This website lays it all out.','http://teenshealth.org/en/teens/your-mind/', '', '','', 11),
+  (4, 'Types & Symptoms of Eating Disorders','Eating disorders -- such as anorexia, bulimia, and binge eating disorder – include extreme emotions, attitudes, and behaviors surrounding weight and food issues. Eating disorders are serious emotional and physical problems that can have life-threatening consequences for females and males.','https://www.nationaleatingdisorders.org/types-symptoms-eating-disorders', 'https://www.facebook.com/NationalEatingDisordersAssociation', 'https://twitter.com/NEDAstaff','https://www.instagram.com/neda/', 25),
+  (5, 'Racism','Racism is the belief that a particular race is superior or inferior to another, that a person’s social and moral traits are predetermined by his or her inborn biological characteristics. Racial separatism is the belief, most of the time based on racism, that different races should remain segregated and apart from one another.','https://www.adl.org/racism', 'facebook5', 'twitter5','otherLink', 41),
 
 INSERT INTO `userTable` (`id`, `userName`, `password`, `verifiedUser`, `role`, `userScore`, `flagged`)
 VALUES
-  (1, 'user1','password1','verified', 'user', 1, 2),
-  (2, 'user2','password2','notVerified', 'mod', 3, 4),
-  (3, 'user3','password3','verified', 'mod', 2, 3),
-  (4, 'user4','password4','verified', 'user', 4, 1),
-  (5, 'user5','password5','notVerified', 'user', 5, 1),
-  (6, 'user6','password6','verified', 'admin', 2, 2),
-  (7, 'user7','password7','verified', 'user', 7, 5);
+  (1, 'Sakina','SakinaPass','verified', 'admin', 1, 0),
+  (2, 'Gabie','GabiePass','notVerified', 'admin', 3, 0),
+  (3, 'Courtney','CourtPass','verified', 'admin', 2, 0),
+  (4, 'Marc','MarcPass','verified', 'admin', 4, 0),
+  (5, 'Melanie','Melpass','verified', 'admin', 5, 0),
+  (6, 'Bob','password6','verified', 'mod', 2, 0),
+  (7, 'Justin','password7','verified', 'user', 7, 2);
 
 INSERT INTO `offensiveTable` (`id`, `word`, `type`)
 VALUES
