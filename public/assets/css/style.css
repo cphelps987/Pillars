@@ -2,7 +2,23 @@
 body {
 	padding-top: 50px;
 	background: #51a48a;
+	font-family: 'Open Sans', sans-serif;
 }
+
+h1, h2, h3 {
+	font-family: 'Cinzel', serif;
+	color: #eee;
+}
+
+p, label {
+	color: white;
+}
+
+h1 {
+	font-weight: bolder;
+}
+
+
 
 /*** Bootstrap Override ***/
 .navbar {
