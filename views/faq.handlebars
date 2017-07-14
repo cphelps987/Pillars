@@ -5,8 +5,10 @@
 	<div id="faq">
 		<ul>
 	{{#each faqtable}}
-			<li>{{this.questions}}</li>
-			<li>{{this.answers}}</li>
+        <strong>{{this.questions}}</strong>
+        <br>
+		{{this.answers}}
+        <br><br>
 	{{/each}}
 		</ul>
 	</div>
