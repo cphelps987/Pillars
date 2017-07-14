@@ -23,7 +23,7 @@ var orm = {
         var queryString = "SELECT ?? ,?? ,??, ??, ??, ?? FROM ??";
         //SELECT `title`, `description`, `link`, `facebook`, `twitter`, `other` FROM `linksTable`;
         connection.query(queryString, [col, col2, col3, col4, col5, col6, table], function (err, result) {
-           // console.log('Table Result ', result);
+           // console.log('Linktable Result ', result);
             cb(result);
         });
     },

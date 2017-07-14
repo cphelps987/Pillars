@@ -24,7 +24,7 @@ CREATE TABLE linksTable
 (
 	id int NOT NULL AUTO_INCREMENT,
 	title varchar(255) NOT NULL,
-	description varchar(255) NOT NULL,
+	description varchar(2555) NOT NULL,
 	link varchar(255) NOT NULL,
 	facebook varchar(255) NULL,
 	twitter varchar(255) NULL,

@@ -43,6 +43,15 @@ router.get('/faq', function(req, res) {
     });
 });
 
+//RESOURSES
+router.get('/chapiter', function(req, res) {
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable", function(resource){
+       console.log(resource);
+        res.render("../views/resources.handlebars", {resourceThis: resource});
+    });
+
+});
+
 router.get('/search', function(req, res) {
 
     res.render("search.handlebars");
@@ -137,13 +146,7 @@ router.post("/create_resource", function(req, res) {
 
 
 
-//RESOURSES
-router.get('/chapiter', function(req, res) {
-    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable", function(resource){
-        res.render("resources.handlebars", {resource: resource});
-    });
 
-});
 
 //TEST LINKS
 router.get('/chattest', function(req, res) {
