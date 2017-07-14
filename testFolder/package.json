@@ -1,0 +1,16 @@
+{
+  "name": "testfolder",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nightmare": "^2.10.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}

@@ -4,11 +4,13 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
+
 				<li><a href="/admin"><strong>Admin</strong></a></li>
 				<li><a href="#">Users Online</a></li>
 				<li><a href="#">Current Chats</a></li>
 				<li><a href="#">Update Resources</a></li>
 				<li><a href="#">Update FAQ</a></li>
+
 			</ul>
 		</div>
 
@@ -22,7 +24,9 @@
 <h1>Admin Page</h1>
 		</div>
 	</div>
-
+            {{#each admin}}
+                {{this}}
+            {{/each}}
 	<div class="row">
 		<div class="col-md-12">
 			<h3>Add Resource</h3>

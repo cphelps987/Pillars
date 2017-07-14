@@ -5,8 +5,8 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var session = require('express-session');
 var passport = require('passport');
-var server = require('http').Server(app);
-var io = require('socket.io').listen(server);
+//var server = require('http').Server(app);
+//var io = require('socket.io').listen(server);
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -29,8 +29,8 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(flash());
 
 //passport middleware
- app.use(passport.initialize());
- app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 //express-session to keep the user logged in
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
@@ -44,24 +44,6 @@ require('./passport.js')(passport);
 require('./chalk.js');
 
 app.use("/", routes);
-
-//test
-orm.selectWhere("chatTable", "link", "https://www.google1.com/");
-
-orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "user");
-orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "mod");
-orm.selectRole("role", "username", "verifiedUser", "userTable", "role", "admin");
-/*
-orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable");*/
-
-orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userTable");
-
-
-// This calls out the user information of those who have been flagged 3 or more times
-orm.selectFlagged("userTable", "flagged", 2, "flagged");
-
-// This calls out the questions and asnwers from the FAQ table
-orm.selectFAQ("questions", "answers", "faqTable");
 
 app.listen(port, function () {
     console.log("Listening on PORT " + port);

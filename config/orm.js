@@ -1,59 +1,58 @@
 connection = require("./connection.js");
 
 var orm = {
-    selectWhere: function (tableInput, colToSearch, valOfCol) {
+    selectWhere: function (tableInput, colToSearch, valOfCol, cb) {
         var queryString = "SELECT * FROM ?? WHERE ?? = ?";
         connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
-           console.log('SelectWhere Result ', result);
+           //console.log('SelectWhere Result ', result);
+            cb(result);
         });
     },
 
-    selectRole: function (col, col2, col3, table, col4, val) {
+    selectRole: function (col, col2, col3, table, col4, val, cb) {
         var queryString = "SELECT ?? ,?? ,?? FROM ?? WHERE ?? = ?";
        // console.log("QS", queryString);
         //SELECT `role`, `username`, `verifiedUser` FROM `userTable` WHERE `verifiedUser` = 'verified' OR 'notVerified';
         connection.query(queryString, [col, col2, col3, table, col4, val], function (err, result) {
-            if (err) {
-                throw err;
-            };
-            console.log('Role result ', result);
+            //console.log('Role result ', result);
+            cb(result);
         })
     },
 
-    selectLinkTable: function (col, col2, col3, col4, col5, col6, table) {
+    selectLinkTable: function (col, col2, col3, col4, col5, col6, table, cb) {
         var queryString = "SELECT ?? ,?? ,??, ??, ??, ?? FROM ??";
         //SELECT `title`, `description`, `link`, `facebook`, `twitter`, `other` FROM `linksTable`;
         connection.query(queryString, [col, col2, col3, col4, col5, col6, table], function (err, result) {
-            if (err) {
-                throw err;
-            }
-            console.log('Table Result ', result);
+           // console.log('Table Result ', result);
+            cb(result);
         });
     },
-    selectUserTable: function (col, col2, col3, col4, table) {
+    selectUserTable: function (col, col2, col3, col4, table, cb) {
         var queryString = "SELECT ?? ,?? ,??, ??  FROM ??";
         //SELECT `userName`, `userScore`, `role`, `verifiedUser`FROM `userTable`;
         connection.query(queryString, [col, col2, col3, col4, table], function (err, result) {
-            if (err) {
-                throw err;
-            }
-            console.log('User Table Result ', result);
+            //console.log('User Table Result ', result);
+            cb(result);
         });
     },
 
 
-    selectFlagged: function (tableInput, colToSearch, valOfCol, colSearch) {
+    selectFlagged: function (tableInput, colToSearch, valOfCol, colSearch, cb) {
         var queryString = "SELECT * FROM ?? WHERE ?? > ? ORDER BY ?? ASC";
         connection.query(queryString, [tableInput, colToSearch, valOfCol, colSearch], function (err, result) {
-           console.log('flagged', result);
+           //console.log('flagged', result);
+            cb(result);
         });
     },
 
-    selectFAQ: function (colToSearch, colSearch, tableInput) {
+    selectFAQ: function (colToSearch, colSearch, tableInput, cb) {
         var queryString = "SELECT ??, ?? FROM ??";
         connection.query(queryString, [colToSearch, colSearch, tableInput], function (err, result) {
-            console.log('faq', result);
+            //console.log('faq', result);
+            cb(result);
         });
+
+
     }
 
 
