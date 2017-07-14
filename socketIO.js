@@ -21,20 +21,19 @@ var app = express();
   http.listen(port, function(){
     console.log('listening on :' + port);
   });*/
-
   // Setup basic express server
-var express = require('express');
+/*var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var io = require('socket.io')(server);
 var port = process.env.PORT || 80;
+var io = require('socket.io')(app);*/
 
-server.listen(port, function () {
+/*server.listen(port, function () {
   console.log('Server listening at port %d', port);
-});
+});*/
 
 // Routing
-app.use(express.static(__dirname + '/publicsocket'));
+//app.use(express.static(__dirname + '/publicsocket'));
 /*  app.get('/', function(req, res){
     res.sendFile(__dirname + '/public/socketTest.html');
   });
@@ -46,6 +45,7 @@ app.use(express.static(__dirname + '/publicsocket'));
   });*/
 
 // Chatroom
+/*module.exports = function (io) {
 
 var numUsers = 0;
 
@@ -106,3 +106,5 @@ io.on('connection', function (socket) {
     }
   });
 });
+console.log('OMG it is alive!');
+}*/

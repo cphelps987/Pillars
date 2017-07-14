@@ -1,27 +1,3 @@
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="chat page">
-						<div class="chatArea">
-							<ul class="messages"></ul>
-						</div>
-						<input class="inputMessage" placeholder="Type here..."/>
-					</div>
-					<div class="login page">
-						<div class="form">
-							<h3 class="title">What's your nickname?</h3>
-							<input class="usernameInput" type="text" maxlength="14" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="socket.io/socket.io.js"></script>
-<script src="assets/js/pagestyle.js"></script>
-
- <!--Chat JS-->
- <script>
 $(function() {
   var FADE_TIME = 150; // ms
   var TYPING_TIMER_LENGTH = 400; // ms
@@ -253,7 +229,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Pillars";
+    var message = "Welcome to Socket.IO Chat – ";
     log(message, {
       prepend: true
     });
@@ -304,4 +280,3 @@ $(function() {
   });
 
 });
- </script>
