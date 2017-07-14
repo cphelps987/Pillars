@@ -96,6 +96,8 @@ router.get('/chattest', function(req, res) {
 
 });
 
+
+
 router.get('/register', function(req, res) {
 
     res.render("signup");
