@@ -5,7 +5,15 @@ var passport = require("passport");
 //BASE
 router.get('/', function(req, res) {
 
-  res.render("index.handlebars");
+    console.log(req.session.passport);
+
+    if (req.session.passport != undefined) {
+
+        res.render("index", {loginUser: req.session.passport});
+
+    } else {
+        res.render("index")
+    }
 
 });
 
@@ -72,15 +80,61 @@ router.get('/plinth', function(req, res) {
 });
 
 router.get('/plinth/:title', function(req, res) {
-  connection.query("SELECT * FROM chattable;", function(err, data) {
+  connection.query("SELECT * FROM chattable where title = ?", [req.params.title], function(err, data) {
+
     if (err) {
       throw err;
     }
 
+		if (data) {
     res.render("chatroom.handlebars", { chattable: data });
+		console.log("RoomData", data);
+
+			} else {
+
+		res.render("error.handlebars");
+				console.log("MF ERROR MF");
+			}
 
   });
 });
+
+//ADMIN
+router.get('/admin', function(req, res) {
+
+  connection.query("SELECT * FROM usertable;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+    res.render("admin.handlebars", { usertable: data });
+  });
+});
+
+router.post("/create_resource", function(req, res) {
+
+	var resource = {
+		title: req.body.title,
+		description: req.body.description,
+		link: req.body.link,
+		facebook: req.body.facebook,
+		twitter: req.body.twitter,
+		other: req.body.other,
+		//other_link: req.body.other_link
+	};
+
+  connection.query("INSERT INTO linkstable SET ?", resource, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      res.redirect('/admin');
+
+		console.log("User Input", this);
+
+    });
+});
+
+
+
 
 //RESOURSES
 router.get('/chapiter', function(req, res) {
@@ -115,9 +169,6 @@ router.post('/register',
 router.get('/login', function(req, res) {
 
     res.render("login");
-
-    console.log("youre signed in");
-
 
 });
 
