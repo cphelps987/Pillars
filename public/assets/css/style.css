@@ -1,40 +1,38 @@
+/*** Main Style ***/
 body {
 	padding-top: 50px;
+	background: #51a48a;
+
+}
+
+
+/*** Bootstrap Override ***/
+.navbar {
+	background: #1B4D3E;
+  border-color: #28735c;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+	color: #aaaaaa;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover  {
+	color: #aaaaaa;
 }
 
 /*** Chat Style ***/
-/* Fix user-agent */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-}
-
-html, input {
-  font-family:
-    "HelveticaNeue-Light",
-    "Helvetica Neue Light",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    "Lucida Grande",
-    sans-serif;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-  word-wrap: break-word;
-}
 
 /* Pages */
 
