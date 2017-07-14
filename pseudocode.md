@@ -144,6 +144,14 @@
 * socket io last resort (redirect to chat page)
 * call orm in connection js inside if statements!
 
+## STATUS ON JULY 13
+
+* **GABI AND SAKINA: NEW CHAT**
+* COURTNEY: Getting orm from backend to front (on page) & heroku(?)
+* MARC: Finish making all the pages and make them look nice 
+* MEL: Help marc with front end
+* EVERYONE: JASMINE AND NIGHTMARE!!!!! :weary:
+
 
 ## Future
 * Have resources load with the chat page 
