@@ -34,7 +34,7 @@ VALUES
   (4, 'Marc','MarcPass','verified', 'admin', 4, 0),
   (5, 'Melanie','Melpass','verified', 'admin', 5, 0),
   (6, 'Bob','password6','verified', 'mod', 2, 0),
-  (7, 'Justin','password7','verified', 'user', 7, 4);
+  (7, 'Justin','password7','verified', 'user', 7, 4),
   (8, 'Josh','password8','notVerified', 'user', 8, 1);
 
 INSERT INTO `offensiveTable` (`id`, `word`, `type`)
