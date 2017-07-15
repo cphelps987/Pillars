@@ -109,6 +109,7 @@ router.get('/plinth/:title', function(req, res) {
     });
 });
 
+//orm.selectFlagged("userTable", "flagged", 2, "flagged");
 //ADMIN
 router.get('/admin', function(req, res) {
     orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
@@ -155,8 +156,9 @@ router.get('/adminUser', function(req, res) {
 });
 
 router.get('/adminChats', function(req, res) {
-    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "flagged", "userScore", "userTable", function(data){
-        //console.log(data);
+    //SELECT `title`, `moderators`, `moderation_level` FROM `chatTable`;
+    orm.selectChat("title", "moderators", "moderation_level", "chatTable", function(data){
+        console.log(data);
         res.render("admin.chats.handlebars", {chatsTable: data});
     });
 });
@@ -167,12 +169,6 @@ router.get('/adminFaq', function(req, res) {
         res.render("admin.faq.handlebars", {faqTable: data});
     });
 });
-
-
-//);
-//orm.selectFlagged("userTable", "flagged", 2, "flagged");
-
-
 
 //TEST LINKS
 router.get('/chattest', function(req, res) {

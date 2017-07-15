@@ -27,76 +27,50 @@
     <div class="row">
         <div class="col-md-12">
             <h3>Current Chats</h3>
-            <!--  <form method="post" action="/create_resource" class="button-size">
+            <form method="post" action="/create_chat" class="button-size">
                 <table class="table">
-
                      <tr>
                          <td>Title:</td>
                          <td><input type="text" class="form-control" name="title"></td>
                      </tr>
                      <tr>
-                         <td>Description: </td>
-                         <td><textarea class="form-control" rows="3" name="description"></textarea></td>
+                         <td>Moderators:</td>
+                         <td><input type="text" class="form-control" name="moderators"></td>
                      </tr>
                      <tr>
-                         <td>Link:</td>
-                         <td><input type="text" class="form-control" name="link"></td>
+                         <td>Moderation Level:</td>
+                         <td><input type="text" class="form-control" name="moderation_level"></td>
                      </tr>
-                     <tr>
-                         <td>Facebook:</td>
-                         <td><input type="text" class="form-control" name="facebook"></td>
-                     </tr>
-                     <tr>
-                         <td>Twitter:</td>
-                         <td><input type="text" class="form-control" name="twitter"></td>
-                     </tr>
-                     <tr>
-                         <td>Other Resource:</td>
-                         <td><input type="text" class="form-control" name="other"></td>
-                     </tr>
-                     <tr>
-                         &lt;!&ndash;
-                                     <td>Other Resource Link:</td>
-                                     <td><input type="text" class="form-control" name="other_link"></td>
-                                 </tr>
-                         &ndash;&gt;
-                     <tr>
                          <td></td>
-                         <td><button class="btn btn-default" type="submit" >Add Resource</button>
+                         <td><button class="btn btn-default" type="submit" >Add Chat</button>
                          </td>
                      </tr>
                  </table>
 
-            </form>-->
+            </form>
 
         </div>
     </div>
- <!--   &lt;!&ndash; "userName", "userScore", "role", "verifiedUser", "userTable" "userScore", "flagged"&ndash;&gt;
-    <h3>Users</h3>
+    <!--//SELECT `title`, `moderators`, `moderation_level` FROM `chatTable`;-->
+    <h3>Chats Currently Open</h3>
     <table class="table">
         <thead>
         <tr>
-            <th>User Name</th>
-            <th>User Score</th>
-            <th>Role</th>
-            <th>Verified</th>
-            <th>User Score</th>
-            <th>Flagged</th>
+            <th>Title</th>
+            <th>Moderators</th>
+            <th>Moderation Level</th>
         </tr>
         </thead>
         <tbody>
-        {{#each adminTable}}
+        {{#each chatsTable}}
             <tr>
-                <td>{{this.userName}}</td>
-                <td>{{this.userScore}}</td>
-                <td>{{this.role}}</td>
-                <td>{{this.verifiedUser}}</td>
-                <td>{{this.userScore}}</td>
-                <td>{{this.flagged}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.moderators}}</td>
+                <td>{{this.moderation_level}}</td>
             </tr>
         {{/each}}
         <tbody>
-    </table>-->
+    </table>
 
     <!-- <h3>FAQ</h3>
     <table class="table">

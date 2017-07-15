@@ -8,6 +8,14 @@ var orm = {
             cb(result);
         });
     },
+    selectChat: function (col, col2, col3, table, cb) {
+        var queryString = "SELECT ??, ??, ?? FROM ??";
+        //SELECT `title`, `moderators`, `moderation_level` FROM `chatTable`;
+        connection.query(queryString, [col, col2, col3, table], function (err, result) {
+            //console.log('Linktable Result ', result);
+            cb(result);
+        });
+    },
 
     selectRole: function (col, col2, col3, table, col4, val, cb) {
         var queryString = "SELECT ?? ,?? ,?? FROM ?? WHERE ?? = ?";
