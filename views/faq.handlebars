@@ -4,11 +4,13 @@
 			<h1 class="text-center">FAQ</h1>
 	<div id="faq">
 		<ul>
+<hr>
 	{{#each faqtable}}
-        <strong>{{this.questions}}</strong>
-        <br>
-		{{this.answers}}
-        <br><br>
+        <li><strong>Question:</strong></li>
+				<li>{{this.questions}}</li>
+        <li><strong>Answer:</strong></li>
+				<li>{{this.answers}}</li>
+<hr>
 	{{/each}}
 		</ul>
 	</div>
