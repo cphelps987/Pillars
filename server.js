@@ -14,16 +14,24 @@ var port = process.env.PORT || 3000;
 app.use(express.static("public"));
 // app.use(express.static(__dirname + '/public'));
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({
+    defaultLayout: "main"
+}));
 app.set("view engine", "handlebars");
 
 //bodyParser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.text());
-app.use(bodyParser.json({type: 'application/vnd.api+json'}));
+app.use(bodyParser.json({
+    type: 'application/vnd.api+json'
+}));
 
 //flash to show a message on incorrect login
 app.use(flash());
@@ -33,7 +41,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //express-session to keep the user logged in
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
+app.use(session({
+    secret: 'keyboard cat',
+    cookie: {
+        maxAge: 60000
+    },
+    resave: true,
+    saveUninitialized: true
+}));
 
 var orm = require('./config/orm.js');
 
@@ -45,6 +60,6 @@ require('./chalk.js');
 
 app.use("/", routes);
 
-app.listen(port, function () {
+app.listen(port, function() {
     console.log("Listening on PORT " + port);
 });

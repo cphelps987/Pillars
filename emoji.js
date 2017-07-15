@@ -1,7 +1,7 @@
 var emoji = require('node-emoji')
-//console.log("emoji is linked")
+    //console.log("emoji is linked")
 
-module.exports = function (app) {
+module.exports = function(app) {
 
     emoji.get('coffee') // returns the emoji code for coffee (displays emoji on terminals that support it)
     console.log(emoji.get('coffee'))

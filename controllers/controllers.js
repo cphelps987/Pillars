@@ -1,4 +1,3 @@
-
 var express = require("express");
 var router = express.Router();
 var passport = require("passport");
@@ -21,7 +20,9 @@ router.get('/', function(req, res) {
 
     if (req.session.passport != undefined) {
 
-        res.render("index", {loginUser: req.session.passport});
+        res.render("index", {
+            loginUser: req.session.passport
+        });
 
     } else {
         res.render("index")
@@ -38,16 +39,20 @@ router.get('/about', function(req, res) {
 router.get('/faq', function(req, res) {
 
     // This calls out the questions and answers from the FAQ table
-    orm.selectFAQ("questions", "answers", "faqTable", function (faq){
-        res.render("../views/faq.handlebars", {faqtable: faq})
+    orm.selectFAQ("questions", "answers", "faqTable", function(faq) {
+        res.render("../views/faq.handlebars", {
+            faqtable: faq
+        })
     });
 });
 
 //RESOURSES
 router.get('/chapiter', function(req, res) {
-    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore" ,"linksTable", function(resource){
-       //console.log(resource);
-        res.render("../views/resources.handlebars", {resourceThis: resource});
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(resource) {
+        //console.log(resource);
+        res.render("../views/resources.handlebars", {
+            resourceThis: resource
+        });
     });
 
 });
@@ -97,7 +102,9 @@ router.get('/plinth/:title', function(req, res) {
         }
 
         if (data) {
-            res.render("chatroom.handlebars", { chattable: data });
+            res.render("chatroom.handlebars", {
+                chattable: data
+            });
             console.log("RoomData", data);
 
         } else {
@@ -112,15 +119,19 @@ router.get('/plinth/:title', function(req, res) {
 //orm.selectFlagged("userTable", "flagged", 2, "flagged");
 //ADMIN
 router.get('/admin', function(req, res) {
-    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
-        res.render("admin.handlebars", {adminTable: data});
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data) {
+        res.render("admin.handlebars", {
+            adminTable: data
+        });
     });
 });
 
 router.get('/adminResources', function(req, res) {
-    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(data){
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(data) {
         //console.log(data);
-        res.render("admin.resources.handlebars", {resourceTable: data});
+        res.render("admin.resources.handlebars", {
+            resourceTable: data
+        });
     });
 });
 
@@ -149,24 +160,30 @@ router.post("/create_resource", function(req, res) {
 
 
 router.get('/adminUser', function(req, res) {
-    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data) {
         //console.log(data);
-        res.render("admin.user.handlebars", {userTable: data});
+        res.render("admin.user.handlebars", {
+            userTable: data
+        });
     });
 });
 
 router.get('/adminChats', function(req, res) {
     //SELECT `title`, `moderators`, `moderation_level` FROM `chatTable`;
-    orm.selectChat("title", "moderators", "moderation_level", "chatTable", function(data){
+    orm.selectChat("title", "moderators", "moderation_level", "chatTable", function(data) {
         console.log(data);
-        res.render("admin.chats.handlebars", {chatsTable: data});
+        res.render("admin.chats.handlebars", {
+            chatsTable: data
+        });
     });
 });
 
 router.get('/adminFaq', function(req, res) {
-    orm.selectFAQ("questions", "answers", "faqTable", function(data){
+    orm.selectFAQ("questions", "answers", "faqTable", function(data) {
         //console.log(data);
-        res.render("admin.faq.handlebars", {faqTable: data});
+        res.render("admin.faq.handlebars", {
+            faqTable: data
+        });
     });
 });
 
