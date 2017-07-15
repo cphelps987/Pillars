@@ -2,14 +2,57 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+				<h1>Plinths</h1>
+				<div id="createPilinth">
 					<form method="post" action="/">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Create a Plinth">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Create</button>
-					</span>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Create a Plinth">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Create</button>
+							</span>
+						</div>
+					</form>
 				</div>
-		</form>
+
+<h3 class="text-center showMore">Advanced Creation <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></h3>
+				<div id="advCreatePilinth" class="col-md-6 col-md-offset-3">
+					<form method="post" action="/">
+						<div class="form-group">
+						<ul>
+							<li><input type="text" class="form-control" placeholder="Name of Plinth"></li>
+							<li><input type="text" class="form-control" placeholder="Moderator"></li>
+							<li><strong>Moderation Level</strong></li>
+							<li class="text-center">
+								<label class="checkbox-inline">
+									<input type="checkbox" class="defaultSelect" value="">None
+								</label>
+								<label class="checkbox-inline">
+									<input type="checkbox" class="defaultUnselect" value="vulgar">Vulgar 
+								</label>
+								<label class="checkbox-inline">
+									<input type="checkbox" class="defaultUnselect" value="raciest">Raciest 
+								</label>
+								<label class="checkbox-inline">
+									<input type="checkbox" class="defaultUnselect" value="sexist">Sexist  
+								</label>
+							</li>
+							<li><strong>Main Topic</strong></li>
+							<li>
+								<select class="form-control">
+									<option>General</option>
+									<option>Abuse</option>
+									<option>Depression</option>
+									<option>LGBT</option>
+									<option>Political Activation</option>
+									<option>Religion</option>
+								</select>
+							</li>
+							<li><input type="text" class="form-control" placeholder="Password protected"></li>
+							<li><button class="btn btn-default" type="button">Create</button></li>
+						</ul>
+						</div>
+					</form>
+				</div>
 		</div>
 	</div>
 </div>
