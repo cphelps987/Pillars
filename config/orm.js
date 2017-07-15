@@ -19,18 +19,18 @@ var orm = {
         })
     },
 
-    selectLinkTable: function (col, col2, col3, col4, col5, col6, table, cb) {
-        var queryString = "SELECT ?? ,?? ,??, ??, ??, ?? FROM ??";
+    selectLinkTable: function (col, col2, col3, col4, col5, col6, col7, table, cb) {
+        var queryString = "SELECT ?? ,?? ,??, ??, ??, ?? , ?? FROM ??";
         //SELECT `title`, `description`, `link`, `facebook`, `twitter`, `other` FROM `linksTable`;
-        connection.query(queryString, [col, col2, col3, col4, col5, col6, table], function (err, result) {
-           // console.log('Linktable Result ', result);
+        connection.query(queryString, [col, col2, col3, col4, col5, col6, col7, table], function (err, result) {
+           //console.log('Linktable Result ', result);
             cb(result);
         });
     },
-    selectUserTable: function (col, col2, col3, col4, table, cb) {
-        var queryString = "SELECT ?? ,?? ,??, ??  FROM ??";
-        //SELECT `userName`, `userScore`, `role`, `verifiedUser`FROM `userTable`;
-        connection.query(queryString, [col, col2, col3, col4, table], function (err, result) {
+    selectUserTable: function (col, col2, col3, col4, col5, col6, table, cb) {
+        var queryString = "SELECT ?? ,?? ,??, ??, ??, ?? FROM ??";
+        //SELECT `userName`, `userScore`, `role`, `verifiedUser`, `userScore`, `flagged` FROM `userTable`;
+        connection.query(queryString, [col, col2, col3, col4, col5, col6, table], function (err, result) {
             //console.log('User Table Result ', result);
             cb(result);
         });

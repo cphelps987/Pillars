@@ -1,0 +1,132 @@
+<!-- NOTE WILL BE REPLACED WHEN USER INFO IS INCLUDED -->
+<nav class="navbar navbar-default">
+    <div class="container">
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li><a href="/admin"><strong>Admin</strong></a></li>
+                <li><a href="/adminUser">Users Online</a></li>
+                <li><a href="/adminChats">Current Chats</a></li>
+                <li><a href="/adminResources">Update Resources</a></li>
+                <li><a href="/adminFaq">Update FAQ</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- END NOTE -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Admin Page</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Add User</h3>
+            <form method="post" action="/create_user" class="button-size">
+                <table class="table">
+
+                     <tr>
+                         <td>User Name:</td>
+                         <td><input type="text" class="form-control" name="title"></td>
+                     </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" class="form-control" name="email"></td>
+                    </tr>
+                     <tr>
+                         <td>Role:</td>
+                         <td>
+                             <div class="form-group" name="role">
+                                 <select class="form-control" id="sel1">
+                                     <option>user</option>
+                                     <option>admin</option>
+                                     <option>mod</option>
+                                 </select>
+                             </div>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>Verified User:</td>
+                         <td>
+                             <div class="form-group" name="verifiedUser">
+                                 <select class="form-control" id="sel1">
+                                     <option>verified</option>
+                                     <option>notVerified</option>
+                                 </select>
+                            </div>
+                         </td>
+                     </tr>
+                    <tr>
+                        <td>User Score: </td>
+                        <td><input class="form-control" rows="3" name="userScore"></td>
+                    </tr>
+                     <tr>
+                         <td>Flagged:</td>
+                         <td><input type="text" class="form-control" name="flagged"></td>
+                     </tr>
+
+                     <tr>
+                         <td></td>
+                         <td><button class="btn btn-default" type="submit" >Add User</button>
+                         </td>
+                     </tr>
+                 </table>
+
+            </form>
+
+        </div>
+    </div>
+    <!-- "userName", "userScore", "role", "verifiedUser", "flagged", "userScore", "userTable"-->
+    <h3>Users</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Verified User</th>
+            <th>User Score</th>
+            <th>Flagged</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each userTable}}
+        <tr>
+            <td>{{this.userName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.role}}</td>
+            <td>{{this.verifiedUser}}</td>
+            <td>{{this.userScore}}</td>
+            <td>{{this.flagged}}</td>
+        </tr>
+        {{/each}}
+        <tbody>
+    </table>
+
+    <!-- <h3>FAQ</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Questions</th>
+            <th>Answers</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each faqThis}}
+            <tr>
+                <td>{{this.questions}}</td>
+                <td>{{this.answers}}</td>
+            </tr>
+        {{/each}}
+        <tbody>
+    </table>-->
+
+
+
+
+</div><!--/container -->
