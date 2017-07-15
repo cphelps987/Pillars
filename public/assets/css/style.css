@@ -19,11 +19,30 @@ h1 {
 /*** PAGE STYLES ***/
 #faq ul {
 	list-style: none;
+	padding: 0px;
 }
 
 #faq li {
 	padding: 5px 0;
 }
+
+#advCreatePilinth {
+	font-size: large;
+}
+
+#advCreatePilinth ul {
+	list-style: none;
+	padding: 0px;
+}
+
+#advCreatePilinth li {
+	padding: 5px 0;
+}
+
+#advCreatePilinth input[type=checkbox] {
+  transform: scale(1.5);
+}
+
 
 #resources ul {
 	list-style: none;
