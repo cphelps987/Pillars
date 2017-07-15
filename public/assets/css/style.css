@@ -25,6 +25,18 @@ h1 {
 	padding: 5px 0;
 }
 
+#resources ul {
+	list-style: none;
+}
+
+#resources li {
+	padding: 5px 0;
+}
+
+#resources a {
+	color: #eee;	
+}
+
 
 /*** BOOTSTRAP OVERRIDE ***/
 .navbar {
