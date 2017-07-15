@@ -46,7 +46,7 @@ router.get('/faq', function(req, res) {
 //RESOURSES
 router.get('/chapiter', function(req, res) {
     orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable", function(resource){
-       console.log(resource);
+       //console.log(resource);
         res.render("../views/resources.handlebars", {resourceThis: resource});
     });
 
@@ -111,14 +111,11 @@ router.get('/plinth/:title', function(req, res) {
 
 //ADMIN
 router.get('/admin', function(req, res) {
-
-    connection.query("SELECT * FROM usertable;", function(err, data) {
-        if (err) {
-            throw err;
-        }
-        res.render("admin.handlebars", { usertable: data });
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
+        res.render("admin.handlebars", {adminTable: data});
     });
 });
+
 
 router.post("/create_resource", function(req, res) {
 
@@ -144,7 +141,36 @@ router.post("/create_resource", function(req, res) {
 });
 
 
+router.get('/adminUser', function(req, res) {
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
+        //console.log(data);
+        res.render("admin.user.handlebars", {adminTable: data});
+    });
+});
 
+router.get('/adminChats', function(req, res) {
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
+        //console.log(data);
+        res.render("admin.chats.handlebars", {chatsTable: data});
+    });
+});
+
+router.get('/adminFaq', function(req, res) {
+    orm.selectFAQ("questions", "answers", "faqTable", function(data){
+        //console.log(data);
+        res.render("admin.faq.handlebars", {faqTable: data});
+    });
+});
+
+router.get('/adminResources', function(req, res) {
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(data){
+        //console.log(data);
+        res.render("admin.resources.handlebars", {resourceTable: data});
+    });
+});
+
+//);
+//orm.selectFlagged("userTable", "flagged", 2, "flagged");
 
 
 
