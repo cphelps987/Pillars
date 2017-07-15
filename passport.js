@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 // ------ Used manjeshpv on githubs code: https://gist.github.com/manjeshpv/84446e6aa5b3689e8b84 ------
 
 // expose this function to our app using module.exports
-module.exports = function (passport) {
+module.exports = function(passport) {
 
 
     // =========================================================================
@@ -24,12 +24,12 @@ module.exports = function (passport) {
     // passport needs ability to serialize and unserialize users out of session
 
     // used to serialize the user for the session
-    passport.serializeUser(function (userName, done) {
+    passport.serializeUser(function(userName, done) {
         done(null, userName);
     });
 
     // used to deserialize the user
-    passport.deserializeUser(function (obj, done) {
+    passport.deserializeUser(function(obj, done) {
         done(null, obj);
     });
 
@@ -48,11 +48,11 @@ module.exports = function (passport) {
             passwordField: 'password',
             passReqToCallback: true // allows us to pass back the entire request to the callback
         },
-        function (req, userName, password, done) {
+        function(req, userName, password, done) {
 
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
-            connection.query("SELECT * from userTable where userName = '" + userName + "'", function (err, rows) {
+            connection.query("SELECT * from userTable where userName = '" + userName + "'", function(err, rows) {
                 console.log(rows);
                 console.log("above row object");
                 if (err)
@@ -70,7 +70,7 @@ module.exports = function (passport) {
 
                     var insertQuery = "INSERT INTO userTable ( userName, password ) values ('" + userName + "','" + password + "')";
                     console.log(insertQuery);
-                    connection.query(insertQuery, function (err, rows) {
+                    connection.query(insertQuery, function(err, rows) {
                         //newUserMysql.id = rows.insertId;
 
                         return done(null, newUserMysql);
@@ -90,13 +90,13 @@ module.exports = function (passport) {
 
     passport.use('local-login', new LocalStrategy({
             // by default, local strategy uses username and password, we will override with email
-            usernameField : 'userName',
-            passwordField : 'password',
-            passReqToCallback : true // allows us to pass back the entire request to the callback
+            usernameField: 'userName',
+            passwordField: 'password',
+            passReqToCallback: true // allows us to pass back the entire request to the callback
         },
         function(req, userName, password, done) { // callback with email and password from our form
 
-            connection.query("SELECT * FROM `userTable` WHERE `userName` = '" + userName + "'",function(err,rows){
+            connection.query("SELECT * FROM `userTable` WHERE `userName` = '" + userName + "'", function(err, rows) {
                 if (err)
                     return done(err);
                 if (!rows.length) {
@@ -104,7 +104,7 @@ module.exports = function (passport) {
                 }
 
                 // if the user is found but the password is wrong
-                if (!( rows[0].password == password))
+                if (!(rows[0].password == password))
                     return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.')); // create the loginMessage and save it to session as flashdata
 
                 // all is well, return successful user
