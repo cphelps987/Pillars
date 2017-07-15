@@ -45,7 +45,7 @@ router.get('/faq', function(req, res) {
 
 //RESOURSES
 router.get('/chapiter', function(req, res) {
-    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "linksTable", function(resource){
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore" ,"linksTable", function(resource){
        //console.log(resource);
         res.render("../views/resources.handlebars", {resourceThis: resource});
     });
