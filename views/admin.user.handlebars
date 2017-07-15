@@ -27,68 +27,78 @@
     <div class="row">
         <div class="col-md-12">
             <h3>Add User</h3>
-            <!--  <form method="post" action="/create_resource" class="button-size">
+            <form method="post" action="/create_user" class="button-size">
                 <table class="table">
 
                      <tr>
-                         <td>Title:</td>
+                         <td>User Name:</td>
                          <td><input type="text" class="form-control" name="title"></td>
                      </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" class="form-control" name="email"></td>
+                    </tr>
                      <tr>
-                         <td>Description: </td>
-                         <td><textarea class="form-control" rows="3" name="description"></textarea></td>
+                         <td>Role:</td>
+                         <td>
+                             <div class="form-group" name="role">
+                                 <select class="form-control" id="sel1">
+                                     <option>user</option>
+                                     <option>admin</option>
+                                     <option>mod</option>
+                                 </select>
+                             </div>
+                         </td>
                      </tr>
                      <tr>
-                         <td>Link:</td>
-                         <td><input type="text" class="form-control" name="link"></td>
+                         <td>Verified User:</td>
+                         <td>
+                             <div class="form-group" name="verifiedUser">
+                                 <select class="form-control" id="sel1">
+                                     <option>verified</option>
+                                     <option>notVerified</option>
+                                 </select>
+                            </div>
+                         </td>
                      </tr>
+                    <tr>
+                        <td>User Score: </td>
+                        <td><input class="form-control" rows="3" name="userScore"></td>
+                    </tr>
                      <tr>
-                         <td>Facebook:</td>
-                         <td><input type="text" class="form-control" name="facebook"></td>
+                         <td>Flagged:</td>
+                         <td><input type="text" class="form-control" name="flagged"></td>
                      </tr>
-                     <tr>
-                         <td>Twitter:</td>
-                         <td><input type="text" class="form-control" name="twitter"></td>
-                     </tr>
-                     <tr>
-                         <td>Other Resource:</td>
-                         <td><input type="text" class="form-control" name="other"></td>
-                     </tr>
-                     <tr>
-                         &lt;!&ndash;
-                                     <td>Other Resource Link:</td>
-                                     <td><input type="text" class="form-control" name="other_link"></td>
-                                 </tr>
-                         &ndash;&gt;
+
                      <tr>
                          <td></td>
-                         <td><button class="btn btn-default" type="submit" >Add Resource</button>
+                         <td><button class="btn btn-default" type="submit" >Add User</button>
                          </td>
                      </tr>
                  </table>
 
-            </form>-->
+            </form>
 
         </div>
     </div>
-    <!-- "userName", "userScore", "role", "verifiedUser", "userTable" "userScore", "flagged"-->
+    <!-- "userName", "userScore", "role", "verifiedUser", "flagged", "userScore", "userTable"-->
     <h3>Users</h3>
     <table class="table">
         <thead>
         <tr>
             <th>User Name</th>
-            <th>User Score</th>
+            <th>Email</th>
             <th>Role</th>
-            <th>Verified</th>
+            <th>Verified User</th>
             <th>User Score</th>
             <th>Flagged</th>
         </tr>
         </thead>
         <tbody>
-        {{#each adminTable}}
+        {{#each userTable}}
         <tr>
             <td>{{this.userName}}</td>
-            <td>{{this.userScore}}</td>
+            <td>{{this.email}}</td>
             <td>{{this.role}}</td>
             <td>{{this.verifiedUser}}</td>
             <td>{{this.userScore}}</td>

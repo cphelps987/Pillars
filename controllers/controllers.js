@@ -116,6 +116,12 @@ router.get('/admin', function(req, res) {
     });
 });
 
+router.get('/adminResources', function(req, res) {
+    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(data){
+        //console.log(data);
+        res.render("admin.resources.handlebars", {resourceTable: data});
+    });
+});
 
 router.post("/create_resource", function(req, res) {
 
@@ -144,12 +150,12 @@ router.post("/create_resource", function(req, res) {
 router.get('/adminUser', function(req, res) {
     orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
         //console.log(data);
-        res.render("admin.user.handlebars", {adminTable: data});
+        res.render("admin.user.handlebars", {userTable: data});
     });
 });
 
 router.get('/adminChats', function(req, res) {
-    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "userScore", "flagged", "userTable", function(data){
+    orm.selectUserTable("userName", "userScore", "role", "verifiedUser", "flagged", "userScore", "userTable", function(data){
         //console.log(data);
         res.render("admin.chats.handlebars", {chatsTable: data});
     });
@@ -162,12 +168,6 @@ router.get('/adminFaq', function(req, res) {
     });
 });
 
-router.get('/adminResources', function(req, res) {
-    orm.selectLinkTable("title", "description", "link", "facebook", "twitter", "other", "resourceScore", "linksTable", function(data){
-        //console.log(data);
-        res.render("admin.resources.handlebars", {resourceTable: data});
-    });
-});
 
 //);
 //orm.selectFlagged("userTable", "flagged", 2, "flagged");
