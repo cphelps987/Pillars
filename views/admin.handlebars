@@ -25,10 +25,9 @@
         </div>
     </div>
 
-
 	<div class="row">
 		<div class="col-md-6">
-			<h3>Add Resource</h3>
+			<h3>Add Resource | Update Resource</h3>
 			<form method="post" action="/create_resource" class="button-size">
 				<table class="table">
 
@@ -76,7 +75,7 @@
 
 		</div>
 		<div class="col-md-6">
-			<h3>Add User</h3>
+			<h3>Add User | Update User</h3>
 			<form method="post" action="/create_user" class="button-size">
 				<table class="table">
 					<tr>
@@ -126,9 +125,83 @@
 			</form>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-6">
+		<h3>Add Plinth | Update Plinth</h3>
+			<form method="post" action="/create_chat">
+				<table class="table">
+					<tr>
+						<td>Title of Plinth</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td>Moderator</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td>Moderation Level</td>
+						<td>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultSelect" value="">None
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="vulgar">Vulgar 
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="raciest">Raciest 
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="sexist">Sexist  
+					</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Main Topic</td>
+						<td>
+				<select class="form-control">
+					<option>General</option>
+					<option>Abuse</option>
+					<option>Depression</option>
+					<option>LGBT</option>
+					<option>Political Activation</option>
+					<option>Religion</option>
+				</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="button">Create</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="col-md-6">
+				<h3>Add FAQ Question | Update FAQ</h3>
+				<form method="post" action="/create_faq" class="button-size">
+					<table class="table">
+					 <tr>
+							 <td>Question:</td>
+							 <td><input type="text" class="form-control" name="questions"></td>
+					 </tr>
+					 <tr>
+							 <td>Answer:</td>
+							 <td><textarea class="form-control" rows="3" name="answers"></textarea></td>
+					 </tr>
+					 <tr>
+							 <td></td>
+							 <td><button class="btn btn-default" type="submit" >Add FAQ</button></td>
+					 </tr>
+					 </table>
+				</form>
+		</div>
+	</div>
+	<div class="row">
 
-
-
+	</div>
 
 
 </div><!--/container -->
