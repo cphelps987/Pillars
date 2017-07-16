@@ -94,6 +94,12 @@ router.get('/plinth', function(req, res) {
 
 });
 
+router.get('/plinth/general', function(req, res) {
+
+    res.render("generalchat.handlebars");
+
+});
+
 router.get('/plinth/:title', function(req, res) {
     connection.query("SELECT * FROM chattable where title = ?", [req.params.title], function(err, data) {
 
