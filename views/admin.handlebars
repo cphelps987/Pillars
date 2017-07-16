@@ -24,10 +24,62 @@
             <h1>Admin Page</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
 
-        </div>
-    </div>
+
+<div class="row">
+		<div class="col-md-6">
+			<h3>Add Resource</h3>
+			<form method="post" action="/create_resource" class="button-size">
+				<table class="table">
+
+					<tr>
+						<td>Title:</td>
+						<td><input type="text" class="form-control" name="title"></td>
+					</tr>
+					<tr>
+						<td>Description: </td>
+						<td><textarea class="form-control" rows="3" name="description"></textarea></td>
+					</tr>
+					<tr>
+						<td>Link:</td>
+						<td><input type="text" class="form-control" name="link"></td>
+					</tr>
+					<tr>
+						<td>Facebook:</td>
+						<td><input type="text" class="form-control" name="facebook"></td>
+					</tr>
+					<tr>
+						<td>Twitter:</td>
+						<td><input type="text" class="form-control" name="twitter"></td>
+					</tr>
+					<tr>
+						<td>Other Resource:</td>
+						<td><input type="text" class="form-control" name="other"></td>
+					</tr>
+					<tr>
+						<td>Resource Score:</td>
+						<td><input type="text" class="form-control" name="resourceScore"></td>
+					</tr>
+			<!--
+					<tr>
+						<td>Other Resource Link:</td>
+						<td><input type="text" class="form-control" name="other_link"></td>
+					</tr>
+			-->
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="submit" >Add Resource</button>
+						</td>
+					</tr>
+				</table>
+				
+			</form>
+
+		</div>
+</div>
+
+
+
+
 
 </div><!--/container -->
