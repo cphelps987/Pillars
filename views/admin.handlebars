@@ -26,7 +26,7 @@
     </div>
 
 
-<div class="row">
+	<div class="row">
 		<div class="col-md-6">
 			<h3>Add Resource</h3>
 			<form method="post" action="/create_resource" class="button-size">
@@ -72,11 +72,60 @@
 						</td>
 					</tr>
 				</table>
-				
 			</form>
 
 		</div>
-</div>
+		<div class="col-md-6">
+			<h3>Add User</h3>
+			<form method="post" action="/create_user" class="button-size">
+				<table class="table">
+					<tr>
+						<td>User Name:</td>
+						<td><input type="text" class="form-control" name="title"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" class="form-control" name="email"></td>
+					</tr>
+					<tr>
+						<td>Role:</td>
+						<td>
+								<div class="form-group" name="role">
+									<select class="form-control" id="sel1">
+									 <option>User</option>
+									 <option>Admin</option>
+									 <option>Moderator</option>
+								 </select>
+								</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Verified User:</td>
+						<td>
+							<div class="form-group" name="verifiedUser">
+							 <select class="form-control" id="sel1">
+									 <option>Verified</option>
+									 <option>Not Verified</option>
+							 </select>
+							</div>
+						</td>
+						</tr>
+					<tr>
+						<td>User Score: </td>
+						<td><input class="form-control" rows="3" name="userScore"></td>
+					</tr>
+					<tr>
+						<td>Flagged:</td>
+						<td><input type="text" class="form-control" name="flagged"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="submit" >Add User</button></td>
+					 </tr>
+			 </table>
+			</form>
+		</div>
+	</div>
 
 
 
