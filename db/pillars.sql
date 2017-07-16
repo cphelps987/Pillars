@@ -7,8 +7,11 @@ CREATE TABLE chatTable
 	id int NOT NULL AUTO_INCREMENT,
 	title varchar(255),
 	moderators varchar(255),
-	moderation_level varchar(255),
-	password varchar(255) NOT NULL,
+	none tinyint(1) DEFAULT NULL,
+	vulgar tinyint(1) DEFAULT NULL,
+	racist tinyint(1) DEFAULT NULL,
+	sexist tinyint(1) DEFAULT NULL,
+	password varchar(255) NULL,
 	PRIMARY KEY (id)
 );
 
@@ -29,7 +32,7 @@ CREATE TABLE linksTable
 	facebook varchar(255) NULL,
 	twitter varchar(255) NULL,
 	other VARCHAR (255) NULL,
-	resourceScore int NOT NULL,
+	resourceScore int NULL,
 	PRIMARY KEY (id)
 );
 

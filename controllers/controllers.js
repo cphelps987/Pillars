@@ -230,4 +230,26 @@ router.post('/login',
     })
 );
 
+router.post("/create_chat", function(req, res) {
+
+    var chat = {
+        title: req.body.title,
+        moderators: req.body.moderators,
+        password: req.body.password
+
+    };
+
+    connection.query("INSERT INTO chatTable SET ?", chat, function(err, result) {
+        if (err) {
+            throw err;
+        }
+        res.redirect('/');
+        //console.log("User Input", this);
+
+    });
+});
+
+
+
+
 module.exports = router;
