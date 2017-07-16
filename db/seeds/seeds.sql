@@ -1,12 +1,12 @@
-INSERT INTO `chatTable` (`id`, `title`, `moderators`, `moderation_level`, `password`)
+INSERT INTO `chatTable` (`id`, `title`, `moderators`, `password`)
 VALUES
-  (1,'LGBTQ+','Moderator1', 'moderation_level1', 'password1'),
-  (2,'The Wall','Moderator2', 'moderation_level2', 'password2'),
-  (3,'Trump','Moderator3', 'moderation_level3', 'password3'),
-  (4,'Hispanics','Moderator4', 'moderation_level4', 'password4'),
-  (5,'Muslim','Moderator5', 'moderation_level5', 'password5'),
-  (6,'African-American','Moderator6', 'moderation_level6', 'password6'),
-  (7,'Disability','Moderator7', 'moderation_level7', 'password7');
+  (1,'LGBTQ+','Moderator1', 'password1'),
+  (2,'The Wall','Moderator2', 'password2'),
+  (3,'Trump','Moderator3', 'password3'),
+  (4,'Hispanics','Moderator4', 'password4'),
+  (5,'Muslim','Moderator5', 'password5'),
+  (6,'African-American','Moderator6', 'password6'),
+  (7,'Disability','Moderator7', 'password7');
 
 INSERT INTO `faqTable` (`id`, `questions`, `answers`)
 VALUES
