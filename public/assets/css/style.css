@@ -56,6 +56,12 @@ h1 {
 	color: #eee;	
 }
 
+/*** CHATROOM STYLES ***/
+iframe {
+    display: block;
+    border: none;
+    height: 90vh;
+}
 
 /*** BOOTSTRAP OVERRIDE ***/
 .navbar {
