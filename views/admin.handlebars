@@ -1,16 +1,13 @@
 <!-- NOTE WILL BE REPLACED WHEN USER INFO IS INCLUDED -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-admin">
   <div class="container">
-
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-
-              <li><a href="/admin"><strong>Admin</strong></a></li>
-              <li><a href="/adminUser">Users Online</a></li>
-              <li><a href="/adminChats">Current Chats</a></li>
-              <li><a href="/adminResources">Update Resources</a></li>
-              <li><a href="/adminFaq">Update FAQ</a></li>
-
+				<li><a href="/admin"><strong>Admin</strong></a></li>
+				<li><a href="/adminUser">Users</a></li>
+				<li><a href="/adminChats">Chats</a></li>
+				<li><a href="/adminResources">Resources</a></li>
+				<li><a href="/adminFaq">FAQ</a></li>
 			</ul>
 		</div>
 
@@ -19,11 +16,11 @@
 <!-- END NOTE -->
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Admin Page</h1>
-        </div>
-    </div>
+	<div class="row">
+			<div class="col-md-12">
+					<h1>Admin Page</h1>
+			</div>
+	</div>
 
 	<div class="row">
 		<div class="col-md-6">
@@ -125,6 +122,7 @@
 			</form>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-md-6">
 		<h3>Add Plinth | Update Plinth</h3>
@@ -199,9 +197,63 @@
 				</form>
 		</div>
 	</div>
-	<div class="row">
 
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Users Online</h3>
+				<table class="table">
+					<thead>
+					<tr>
+							<th>User Name</th>
+							<th>Email</th>
+							<th>Role</th>
+							<th>Verified User</th>
+							<th>User Score</th>
+							<th>Flagged</th>
+					</tr>
+					</thead>
+					<tbody>
+					{{#each userTable}}
+					<tr>
+							<td>{{this.userName}}</td>
+							<td>{{this.email}}</td>
+							<td>{{this.role}}</td>
+							<td>{{this.verifiedUser}}</td>
+							<td>{{this.userScore}}</td>
+							<td>{{this.flagged}}</td>
+					</tr>
+					{{/each}}
+					</tbody>
+				</table>
+		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Active Plinths</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Moderator</th>
+            <th>Moderation Level</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each chatsTable}}
+            <tr>
+                <td>{{this.title}}</td>
+                <td>{{this.moderators}}</td>
+                <td>{{this.moderation_level}}</td>
+            </tr>
+        {{/each}}
+        <tbody>
+    </table>
+
+		</div>
+	</div>
+
 
 
 </div><!--/container -->
