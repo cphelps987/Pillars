@@ -30,6 +30,7 @@
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.3",
+    "jplayer": "^2.9.2",
     "morgan": "^1.8.2",
     "mysql": "^2.13.0",
     "node-emoji": "^1.7.0",
