@@ -1,6 +1,5 @@
 # Pillars - Restructuring Humanity
 
-![lucidchart1](https://github.com/cphelps987/Project2/blob/master/lucidchart.png)
 ![lucidchart1](https://github.com/cphelps987/Project2/blob/master/Pillars%20-%20Page%201.png)
 
 
