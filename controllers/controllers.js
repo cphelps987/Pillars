@@ -235,6 +235,9 @@ router.post("/create_chat", function(req, res) {
     var chat = {
         title: req.body.title,
         moderators: req.body.moderators,
+        none: req.body.none,
+        vulgar: req.body.vulgar,
+        racist: req.body.racist,
         password: req.body.password
 
     };
