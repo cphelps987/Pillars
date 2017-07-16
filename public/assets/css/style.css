@@ -16,6 +16,14 @@ h1 {
 	font-weight: bolder;
 }
 
+ul {
+	list-style: none;
+}
+
+li {
+	padding: 5px 0;
+}
+
 /*** PAGE STYLES ***/
 #faq ul {
 	list-style: none;
@@ -35,21 +43,8 @@ h1 {
 	padding: 0px;
 }
 
-#advCreatePilinth li {
-	padding: 5px 0;
-}
-
 #advCreatePilinth input[type=checkbox] {
   transform: scale(1.5);
-}
-
-
-#resources ul {
-	list-style: none;
-}
-
-#resources li {
-	padding: 5px 0;
 }
 
 #resources a {
@@ -87,4 +82,17 @@ iframe {
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover  {
 	color: #aaaaaa;
+}
+
+.navbar-admin {
+	background: #35997b;
+  border-color: #43be98;
+	height: 50px;
+	margin-bottom: 0px;
+	top: 50;
+	border-width: 0 0 1px;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1020;
 }

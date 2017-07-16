@@ -1,33 +1,259 @@
 <!-- NOTE WILL BE REPLACED WHEN USER INFO IS INCLUDED -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-admin">
   <div class="container">
-
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-
-              <li><a href="/admin"><strong>Admin</strong></a></li>
-              <li><a href="/adminUser">Users Online</a></li>
-              <li><a href="/adminChats">Current Chats</a></li>
-              <li><a href="/adminResources">Update Resources</a></li>
-              <li><a href="/adminFaq">Update FAQ</a></li>
-
+				<li><a href="/admin"><strong>Admin</strong></a></li>
+				<li><a href="/adminUser">Users</a></li>
+				<li><a href="/adminChats">Chats</a></li>
+				<li><a href="/adminResources">Resources</a></li>
+				<li><a href="/adminFaq">FAQ</a></li>
 			</ul>
 		</div>
 
 	</div>
 </nav>
+<div style="height:50px;"></div>
 <!-- END NOTE -->
-
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Admin Page</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
+	<div class="row">
+			<div class="col-md-12">
+					<h1>Admin Page</h1>
+			</div>
+	</div>
 
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Add Resource | Update Resource</h3>
+			<form method="post" action="/create_resource" class="button-size">
+				<table class="table">
+
+					<tr>
+						<td>Title:</td>
+						<td><input type="text" class="form-control" name="title"></td>
+					</tr>
+					<tr>
+						<td>Description: </td>
+						<td><textarea class="form-control" rows="3" name="description"></textarea></td>
+					</tr>
+					<tr>
+						<td>Link:</td>
+						<td><input type="text" class="form-control" name="link"></td>
+					</tr>
+					<tr>
+						<td>Facebook:</td>
+						<td><input type="text" class="form-control" name="facebook"></td>
+					</tr>
+					<tr>
+						<td>Twitter:</td>
+						<td><input type="text" class="form-control" name="twitter"></td>
+					</tr>
+					<tr>
+						<td>Other Resource:</td>
+						<td><input type="text" class="form-control" name="other"></td>
+					</tr>
+					<tr>
+						<td>Resource Score:</td>
+						<td><input type="text" class="form-control" name="resourceScore"></td>
+					</tr>
+			<!--
+					<tr>
+						<td>Other Resource Link:</td>
+						<td><input type="text" class="form-control" name="other_link"></td>
+					</tr>
+			-->
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="submit" >Add Resource</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+
+		</div>
+		<div class="col-md-6">
+			<h3>Add User | Update User</h3>
+			<form method="post" action="/create_user" class="button-size">
+				<table class="table">
+					<tr>
+						<td>User Name:</td>
+						<td><input type="text" class="form-control" name="title"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" class="form-control" name="email"></td>
+					</tr>
+					<tr>
+						<td>Role:</td>
+						<td>
+								<div class="form-group" name="role">
+									<select class="form-control" id="sel1">
+									 <option>User</option>
+									 <option>Admin</option>
+									 <option>Moderator</option>
+								 </select>
+								</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Verified User:</td>
+						<td>
+							<div class="form-group" name="verifiedUser">
+							 <select class="form-control" id="sel1">
+									 <option>Verified</option>
+									 <option>Not Verified</option>
+							 </select>
+							</div>
+						</td>
+						</tr>
+					<tr>
+						<td>User Score: </td>
+						<td><input class="form-control" rows="3" name="userScore"></td>
+					</tr>
+					<tr>
+						<td>Flagged:</td>
+						<td><input type="text" class="form-control" name="flagged"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="submit" >Add User</button></td>
+					 </tr>
+			 </table>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+		<h3>Add Plinth | Update Plinth</h3>
+			<form method="post" action="/create_chat">
+				<table class="table">
+					<tr>
+						<td>Title of Plinth</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td>Moderator</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td>Moderation Level</td>
+						<td>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultSelect" value="">None
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="vulgar">Vulgar 
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="raciest">Raciest 
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" class="defaultUnselect" value="sexist">Sexist  
+					</label>
+						</td>
+					</tr>
+					<tr>
+						<td>Main Topic</td>
+						<td>
+				<select class="form-control">
+					<option>General</option>
+					<option>Abuse</option>
+					<option>Depression</option>
+					<option>LGBT</option>
+					<option>Political Activation</option>
+					<option>Religion</option>
+				</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="text" class="form-control"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn btn-default" type="button">Create</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="col-md-6">
+				<h3>Add FAQ Question | Update FAQ</h3>
+				<form method="post" action="/create_faq" class="button-size">
+					<table class="table">
+					 <tr>
+							 <td>Question:</td>
+							 <td><input type="text" class="form-control" name="questions"></td>
+					 </tr>
+					 <tr>
+							 <td>Answer:</td>
+							 <td><textarea class="form-control" rows="3" name="answers"></textarea></td>
+					 </tr>
+					 <tr>
+							 <td></td>
+							 <td><button class="btn btn-default" type="submit" >Add FAQ</button></td>
+					 </tr>
+					 </table>
+				</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Users Online</h3>
+				<table class="table">
+					<thead>
+					<tr>
+							<th>User Name</th>
+							<th>Email</th>
+							<th>Role</th>
+							<th>Verified User</th>
+							<th>User Score</th>
+							<th>Flagged</th>
+					</tr>
+					</thead>
+					<tbody>
+					{{#each userTable}}
+					<tr>
+							<td>{{this.userName}}</td>
+							<td>{{this.email}}</td>
+							<td>{{this.role}}</td>
+							<td>{{this.verifiedUser}}</td>
+							<td>{{this.userScore}}</td>
+							<td>{{this.flagged}}</td>
+					</tr>
+					{{/each}}
+					</tbody>
+				</table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Active Plinths</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Moderator</th>
+            <th>Moderation Level</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each chatsTable}}
+            <tr>
+                <td>{{this.title}}</td>
+                <td>{{this.moderators}}</td>
+                <td>{{this.moderation_level}}</td>
+            </tr>
+        {{/each}}
+        <tbody>
+    </table>
+
+		</div>
+	</div>
+
+
 
 </div><!--/container -->

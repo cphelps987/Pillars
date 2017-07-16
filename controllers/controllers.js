@@ -150,6 +150,7 @@ router.post("/create_resource", function(req, res) {
         facebook: req.body.facebook,
         twitter: req.body.twitter,
         other: req.body.other,
+        resourceScore: req.body.resourceScore,
         //other_link: req.body.other_link
     };
 
