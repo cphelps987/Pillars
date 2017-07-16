@@ -126,7 +126,7 @@
 * MEL: Help marc with front end
 * JASMINE AND NIGHTMARE!!!!! :weary:
 
-# Project Outline
+# Project Guidelines
 This document outlines the base requirements for Project 2.
 
 Requirements
