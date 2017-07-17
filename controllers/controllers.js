@@ -158,7 +158,7 @@ router.post("/create_resource", function(req, res) {
         if (err) {
             throw err;
         }
-        res.redirect('/admin');
+        res.redirect('/');
 
         console.log("User Input", this);
 
