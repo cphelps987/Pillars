@@ -25,6 +25,12 @@ li {
 }
 
 /*** PAGE STYLES ***/
+
+.logo {
+	margin-top: 45px;
+	text-align: center;
+}
+
 #faq ul {
 	list-style: none;
 	padding: 0px;
