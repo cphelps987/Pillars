@@ -24,11 +24,28 @@ li {
 	padding: 5px 0;
 }
 
+a {
+	color: #eee;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #dddddd;
+	text-decoration: none;
+}
+
+
 /*** PAGE STYLES ***/
 
 .logo {
 	margin-top: 45px;
 	text-align: center;
+}
+
+.popularchat li {
+	float: right;
+	padding: 10px;
+	font-size: large;
 }
 
 #faq ul {
@@ -68,6 +85,9 @@ iframe {
 .navbar {
 	background: #1B4D3E;
   border-color: #28735c;
+}
+.navbar a {
+	text-decoration: none;
 }
 
 .navbar-default .navbar-brand {
