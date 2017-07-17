@@ -158,7 +158,7 @@ router.post("/create_resource", function(req, res) {
         if (err) {
             throw err;
         }
-        res.redirect('/admin');
+        res.redirect('/');
 
         console.log("User Input", this);
 
@@ -244,6 +244,46 @@ router.post("/create_chat", function(req, res) {
     };
 
     connection.query("INSERT INTO chatTable SET ?", chat, function(err, result) {
+        if (err) {
+            throw err;
+        }
+        res.redirect('/');
+        //console.log("User Input", this);
+
+    });
+});
+
+router.post("/create_user", function(req, res) {
+
+    var user = {
+        userName: req.body.userName,
+        password: req.body.password,
+        email: req.body.email,
+        verifiedUser: req.body.verifiedUser,
+        role: req.body.role,
+        userScore: req.body.userScore,
+        flagged: req.body.flagged
+
+    };
+
+    connection.query("INSERT INTO userTable SET ?", user, function(err, result) {
+        if (err) {
+            throw err;
+        }
+        res.redirect('/');
+        //console.log("User Input", this);
+
+    });
+});
+
+router.post("/create_faq", function(req, res) {
+
+    var faq = {
+        questions: req.body.questions,
+        answers: req.body.answers
+    };
+
+    connection.query("INSERT INTO faqTable SET ?", faq, function(err, result) {
         if (err) {
             throw err;
         }
