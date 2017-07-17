@@ -100,6 +100,24 @@ router.get('/plinth/general', function(req, res) {
 
 });
 
+router.get('/plinth/lgbt', function(req, res) {
+
+    res.render("lgbtchat.handlebars");
+
+});
+
+router.get('/plinth/sexist', function(req, res) {
+
+    res.render("sexistchat.handlebars");
+
+});
+
+router.get('/plinth/transgender', function(req, res) {
+
+    res.render("transchat.handlebars");
+
+});
+
 router.get('/plinth/:title', function(req, res) {
     connection.query("SELECT * FROM chattable where title = ?", [req.params.title], function(err, data) {
 
