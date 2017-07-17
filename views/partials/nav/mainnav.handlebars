@@ -20,7 +20,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-				<li><form class="navbar-form">
+					<li><form class="navbar-form">
 					<div class="form-group">
 						<input type="text" id="searchinput" class="form-control" placeholder="Search">
 					</div>
@@ -28,9 +28,7 @@
 				</form></li>
 
           {{#if loginUser}}
-
-              <p>Hello {{loginUser.user.userName}}</p>
-
+              <li><a>Hello {{loginUser.user.userName}}</a></li>
           {{else}}
 
         <li class="dropdown">
