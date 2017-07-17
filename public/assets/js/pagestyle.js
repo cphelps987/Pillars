@@ -7,6 +7,12 @@ $(document).ready(function() {
         $(".moreInfo").show();
     });
 
+		//Video Control
+		$('.video').click(function(){
+			this.paused?
+			this.play():this.pause();
+		});
+
     //Plinth Creation advance options
     $("#advCreatePilinth").hide();
     $(".showMore").click(function() {

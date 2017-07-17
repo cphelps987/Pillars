@@ -1,48 +1,51 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h1 class="text-center">Pillars- Restructuring Humanity</h1>
+			<h1 class="text-center">Pillars</h1>
+			<h3 class="text-center">Helping One Another Find Structure</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
 
-			<h2>Plinths</h2>
-		<p>Areas to gather and chat</p>
-		<form method="post" action="/create_chat">
+			<h2>Plinth <small>noun - \ˈplin(t)th\ </small></h2>
+		<p><form method="post" action="/create_chat">
 				<div class="input-group">
-					<input type="text" class="form-control" name="title" placeholder="Create a Plinth">
+					<input type="text" class="form-control" name="title" placeholder="Create a Plinth" required>
+
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="submit">Create</button>
 					</span>
 				</div>
-		</form>
-
+		</form></p>
+<p>A plinth is the base of a pillar. On Pillars a plinth is a place where people can gather and chat this is the basis of what the site it built upon. </p>
 			<h2>Chapiters</h2>
 		<p>Information to help</p>
 
 <form method="post" action="/create_resource">
 			<div class="form-group">
 				<label>Site Name</label>
-				<input type="text" class="form-control" placeholder="Website Name" name="title">
+				<input type="text" class="form-control" placeholder="Website Name" name="title" required>
 			</div>
 		<div class="form-group">
 				<label>Site Link</label>
-				<input type="text" class="form-control" placeholder="Website URL" name="link">
+				<input type="url" class="form-control" placeholder="Website URL" name="link" required>
 		</div>
 		<div class="form-group">
 			<label>Description</label>
-			<input type="textbox" class="form-control" placeholder="A general description of site" name="description">
+			<input type="textbox" class="form-control" placeholder="A general description of site" name="description" required>
 		</div>
-			<button type="submit" class="btn btn-primary" value="register" >Submit</button>
-</form>
+			<button type="submit" class="btn btn-default" value="register" >Submit</button>
+</form></p>
 
+			<p>A chapiter is the head of a pillar. On Pillars a each chapiter is a resource to help others and by sharing aid we build a stronger community.</p>
 		</div>
 		<div class="col-md-6">
-			<h2>Video of site in action<h2>
+<video class="video" width="100%" poster="assets/img/posterimage.jpg" controls>
+  <source src="test.mp4" type="video/mp4">
 
-
-
+Your browser does not support the video tag.
+</video> 
 
 		</div>
 	</div>
