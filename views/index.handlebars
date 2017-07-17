@@ -9,11 +9,11 @@
 
 			<h2>Plinths</h2>
 		<p>Areas to gather and chat</p>
-		<form method="post" action="/createChat">
+		<form method="post" action="/create_chat">
 				<div class="input-group">
-					<input type="text" class="form-control" name="chatTitle" placeholder="Create a Plinth">
+					<input type="text" class="form-control" name="title" placeholder="Create a Plinth">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Create</button>
+						<button class="btn btn-default" type="submit">Create</button>
 					</span>
 				</div>
 		</form>
@@ -21,18 +21,18 @@
 			<h2>Chapiters</h2>
 		<p>Information to help</p>
 
-<form method="post" action="/">
+<form method="post" action="/create_resource">
 			<div class="form-group">
 				<label>Site Name</label>
-				<input type="text" class="form-control" placeholder="Website Name" name="siteName">
+				<input type="text" class="form-control" placeholder="Website Name" name="title">
 			</div>
 		<div class="form-group">
 				<label>Site Link</label>
-				<input type="text" class="form-control" placeholder="Website URL" name="siteURL">
+				<input type="text" class="form-control" placeholder="Website URL" name="link">
 		</div>
 		<div class="form-group">
 			<label>Description</label>
-			<input type="textbox" class="form-control" placeholder="A general description of site" name="siteDescription">
+			<input type="textbox" class="form-control" placeholder="A general description of site" name="description">
 		</div>
 			<button type="submit" class="btn btn-primary" value="register" >Submit</button>
 </form>
